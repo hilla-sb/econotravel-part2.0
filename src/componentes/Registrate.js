@@ -5,7 +5,7 @@ export default function registrate(){
         <div>
             <img>logo</img>
             <div>
-                    <form>
+                    <form>{/* (ESTE ES MATERIAL UI!!!!!!!) */}
                         <InputLabel htmlFor="name">Name:</InputLabel>
                         <Input id="name" aria-actibeby="nombre" />
                         <FormHelperText id="nombre">Tu nombre </FormHelperText>
