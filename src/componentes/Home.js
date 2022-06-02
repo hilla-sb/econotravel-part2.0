@@ -7,12 +7,14 @@ export default function Home () {
       <Button>Descubre más</Button>
 
 //---------------------------------------------------------------------
+
       <h1>Experiencias en el área de Barcelona</h1>
       <link>Ubicación</link> 
       <link>Transporte</link>
       <link>Duración</link> 
 
 //_____________________________---------------------_________________________
+
       <div>
         <img src="" alt="" href="">Exp 1</img>
         <div>
@@ -30,6 +32,7 @@ export default function Home () {
       </div>
 
 //__________________________________________________________________________
+
       <div>
         <img src="" alt="" href="">Exp 2</img>
         <div>
@@ -63,10 +66,20 @@ export default function Home () {
         <link>Reserva ahora</link>
       </div>
       </div>
+
 //---------------------------------------------------------------------
-    <div>
+
+<div>
       <img></img>
+      <p>Travel Any Corner of The World With Us</p>
+      <p></p>
+      <Button>Contáctanos</Button>
     </div>
+
+//---------------------------------------------------------------------
+
+      <img src="" alt="" href="">Imagen descuento (HERO IMAGE)</img>
+      <Button>Regístrate hoy</Button>
     </>
       )
 }
