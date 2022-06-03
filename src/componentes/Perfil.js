@@ -4,7 +4,7 @@ import MisReservas from './MisReservas';
 export default function Perfil () {
   return (
     <>
-    <img src="" href="" alt=""></img>
+    <img src="" href="" alt="">(LOGO)</img>
     <Table>
       <ul>
         <li>Mi perfil</li>
@@ -13,7 +13,7 @@ export default function Perfil () {
     </Table>
     <div>
       <Form>
-        <Button>Guardar</Button>
+        <Button>Guardar</Button> {/* button opcional */}
       </Form>
     </div>
     </>

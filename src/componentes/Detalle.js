@@ -1,5 +1,6 @@
-import react from 'react'
-import { Breadcrumb, Navbar } from 'react-bootstrap'
+import react from 'react';
+import { Breadcrumb, Navbar } from 'react-bootstrap';
+import Footer from './Footer';
 
 export default function Detalle () {
   return (
