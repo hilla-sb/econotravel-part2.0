@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 
-export default function Search () {
+export default function Catalogo () {
   return (
     <>
       <Navbar/>

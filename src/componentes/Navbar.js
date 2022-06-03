@@ -1,12 +1,22 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import Navbar from 'react-bootstrap/Navbar';
+/* import Perfil from './Perfil';
+import MisReservas from './MisReservas'; */
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export default function HomeNav () {
   return(
     <>
+
+    {/* LOGO + BARRA BÚSQUEDA + MONO + CESTA DE LA COMPRA 
+
+    <img src="" alt="">Gorila</img>
+      <DropdownMenu>Mi perfil<Perfil/> Mis reservas<MisReservas/> Logout</DropdownMenu>
+      <img src="" alt="">Cesta</img> */}
+
+
       <div class="navbar">
       <Navbar bg="light" expand="lg">
         <Container>
@@ -28,7 +38,6 @@ export default function HomeNav () {
         </Container>
       </Navbar>
       </div>
-
     </>
   )
 }

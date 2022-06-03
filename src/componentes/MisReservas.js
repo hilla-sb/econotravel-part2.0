@@ -1,4 +1,5 @@
 import React from 'react';
+import Perfil from './Perfil';
 
 export default function MisReservas () {
   return (
@@ -6,7 +7,7 @@ export default function MisReservas () {
       <img src="" href="" alt=""></img>
       <Table>
         <ul>
-          <li>Mi perfil</li>
+          <li>Mi perfil <Perfil/></li>
           <li>Mis reservas</li>
         </ul>
       </Table>

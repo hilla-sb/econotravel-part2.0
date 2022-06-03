@@ -3,7 +3,7 @@ import React from 'react';
 export default function Home () {
   return (
     <>
-      <img src="" alt="" href="">Imagen home</img>
+      <img src="" alt="" href="">Hero image</img>
       <Button>Descubre más</Button>
 
 //---------------------------------------------------------------------
