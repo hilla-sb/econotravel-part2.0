@@ -5,6 +5,7 @@ export default function Home () {
     <>
       <img src="" alt="" href="">Hero image</img>
       <Button>Descubre más</Button>
+      {/* button llevar a experiencias */}
 
 //---------------------------------------------------------------------
 
@@ -80,6 +81,7 @@ export default function Home () {
 
       <img src="" alt="" href="">Imagen descuento (HERO IMAGE)</img>
       <Button>Regístrate hoy</Button>
+      
     </>
       )
 }

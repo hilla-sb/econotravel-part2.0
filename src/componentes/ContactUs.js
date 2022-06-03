@@ -1,10 +1,9 @@
-import react from 'react'
-import { Navbar } from 'react-bootstrap'
+import react from 'react';
 
 export default function ContactUs () {
   return (
     <>
-      <Navbar/>
+      <img src="" alt="">(LOGO)</img>
       <h1>Misión</h1>
       <p>Nuestra empresa se fundó...</p>
       <img src="" alt=""></img>
@@ -13,7 +12,6 @@ export default function ContactUs () {
       <p>Teléfono</p>
       <p>Correo</p>
       <p>Dirección</p>
-      <Footer/>
     </>
     )
   }
