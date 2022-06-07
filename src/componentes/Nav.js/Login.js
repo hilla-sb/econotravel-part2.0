@@ -2,7 +2,7 @@ import React from "react";
 
 export default function login(){
     return(
-        <div>
+        <div className="login-pg">
             <img>logo</img>
             <div>
                     <form>{/* (ESTE ES MATERIAL UI!!!!!!!) */}

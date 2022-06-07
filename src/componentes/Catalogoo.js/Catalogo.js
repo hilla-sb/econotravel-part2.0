@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar.js';
+import Navbar from './Nav.js/Navbar.js';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 /* import Footer from './Footer.js'; */
@@ -7,12 +7,12 @@ import CardGroup from 'react-bootstrap/CardGroup'
 
 export default function Catalogo () {
   return (
-    <>
+    <div classname="catalogo">
       <Navbar/>
 
       <CardGroup>
         <Card>
-          <Card.Img variant="top" src="https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" alt="Man riding a bicicle in a beautiful mountain scenery"/>
+          <Card.Img variant="top" src="https://images.unsplash.com/photo-1530696849033-05770f765d21?ixlib=rb-1.2.1&ixid=MnwxM[…]yMHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt=" Group riding bicicles in a mountain scenery"/>
           <Card.Body>
             <Card.Title>Card title</Card.Title>
             <Card.Text>
@@ -120,6 +120,6 @@ export default function Catalogo () {
 //---------------------------------------------------------------------
 
     <Footer/> */}
-    </>
+    </div>
   )
 }

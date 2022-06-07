@@ -1,9 +1,9 @@
 import React from 'react';
-import Perfil from './Perfil';
+import Perfil from '../Perfil';
 
 export default function MisReservas () {
   return (
-    <>
+    <div className="mis-reservas">
       <img src="" href="" alt=""></img>
       <Table>
         <ul>
@@ -19,6 +19,6 @@ export default function MisReservas () {
           </ul>
         </Table>
       </div>
-    </>
+    </div>
   )
 }
