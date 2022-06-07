@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Nav.js/Navbar.js';
+import Navbar from './Nav.js/Navbar.js.js';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
-/* import Footer from './Footer.js'; */
+import Footer from './Footer.js'; 
 
 
 export default function Catalogo () {
@@ -119,7 +119,7 @@ export default function Catalogo () {
 
 //---------------------------------------------------------------------
 
-    <Footer/> */}
+    <Footer/>  */}
     </div>
   )
 }

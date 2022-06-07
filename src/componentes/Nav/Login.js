@@ -3,7 +3,7 @@ import React from "react";
 export default function login(){
     return(
         <div className="login-pg">
-            <img>logo</img>
+            <img src="" alt="">logo</img>
             <div>
                     <form>{/* (ESTE ES MATERIAL UI!!!!!!!) */}
                         <InputLabel htmlFor="name">Name:</InputLabel>
@@ -17,7 +17,7 @@ export default function login(){
                         <button>Login</button>
                     </form>
                 <p>Haz click </p>
-                <link>aqui</link>
+                {/* <link>aqui</link> */}
                 <p>si todavia no te has registrado</p>
             </div>
         </div>
