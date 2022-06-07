@@ -17,7 +17,7 @@ export default function HomeNav () {
       <img src="" alt="">Cesta</img> */}
 
 
-      <div class="navbar">
+      <div className="navbar">
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
