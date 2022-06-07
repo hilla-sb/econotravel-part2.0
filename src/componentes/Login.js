@@ -5,15 +5,15 @@ export default function Login(){
         <div>
             <img>logo</img>
             <div>
-                    <form>
+                    <form>{/* (ESTE ES MATERIAL UI!!!!!!!) */}
                         <InputLabel htmlFor="name">Name:</InputLabel>
                         <Input id="name" aria-actibeby="nombre" />
                         <FormHelperText id="nombre">Tu nombre </FormHelperText>
-//----------------------- separador de elementos del formilario--------------------------------
+//----------------------- separador de elementos del formulario--------------------------------
                         <InputLabel htmlFor="psw">Password:</InputLabel>
                         <Input id="psw" type="password" aria-actibeby="password-helper" />
-                        <FormHelperText id="password-helper">Escribe tu contrasena</FormHelperText>
-//----------------------- separador de elementos del formilario--------------------------------
+                        <FormHelperText id="password-helper"></FormHelperText>
+//----------------------- separador de elementos del formulario--------------------------------
                         <button>Login</button>
                     </form>
                 <p>Haz click </p>

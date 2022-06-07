@@ -1,20 +1,22 @@
 import React from 'react';
+import Navbar from './Navbar.js';
+import Footer from './Footer.js';
 
-export default function Home () {
+export default function Catalogo () {
   return (
     <>
-      <img src="" alt="" href="">Hero image</img>
-      <Button>Descubre más</Button>
-      {/* button llevar a experiencias */}
+      <Navbar/>
 
 //---------------------------------------------------------------------
+
+//====================RAÚL DICE Q NOS PASARÁ ALGO PARA PONER AQUÍ!!!!!!=================== 
 
       <h1>Experiencias en el área de Barcelona</h1>
       <link>Ubicación</link> 
       <link>Transporte</link>
       <link>Duración</link> 
 
-//__________________________---------------------_________________________
+//_____________________________---------------------_________________________
 
       <div>
         <img src="" alt="" href="">Exp 1</img>
@@ -70,19 +72,7 @@ export default function Home () {
 
 //---------------------------------------------------------------------
 
-<div>
-      <img></img>
-      <p>Travel Any Corner of The World With Us</p>
-      <p></p>
-      <Button>Contáctanos</Button>
-    </div>
-
-//---------------------------------------------------------------------
-
-      <img src="" alt="" href="">Imagen descuento (HERO IMAGE)</img>
-      <Button>Regístrate hoy</Button>
-      
+    <Footer/>
     </>
-      )
+  )
 }
-   
