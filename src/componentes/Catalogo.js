@@ -1,13 +1,60 @@
 import React from 'react';
 import Navbar from './Navbar.js';
-import Footer from './Footer.js';
+import Card from 'react-bootstrap/Card'
+import CardGroup from 'react-bootstrap/CardGroup'
+/* import Footer from './Footer.js'; */
+
 
 export default function Catalogo () {
   return (
     <>
       <Navbar/>
 
-//---------------------------------------------------------------------
+      <CardGroup>
+        <Card>
+          <Card.Img variant="top" src="https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80" alt="Man riding a bicicle in a beautiful mountain scenery"/>
+          <Card.Body>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+              This is a wider card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">Last updated 3 mins ago</small>
+          </Card.Footer>
+        </Card>
+        <Card>
+          <Card.Img variant="top" src="holder.js/100px160" />
+          <Card.Body>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+              This card has supporting text below as a natural lead-in to additional
+              content.{' '}
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">Last updated 3 mins ago</small>
+          </Card.Footer>
+        </Card>
+        <Card>
+          <Card.Img variant="top" src="holder.js/100px160" />
+          <Card.Body>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+              This is a wider card with supporting text below as a natural lead-in to
+              additional content. This card has even longer content than the first to
+              show that equal height action.
+            </Card.Text>
+          </Card.Body>
+          <Card.Footer>
+            <small className="text-muted">Last updated 3 mins ago</small>
+          </Card.Footer>
+        </Card>
+      </CardGroup>
+
+
+{/* //---------------------------------------------------------------------
 
 //====================RAÚL DICE Q NOS PASARÁ ALGO PARA PONER AQUÍ!!!!!!=================== 
 
@@ -72,7 +119,7 @@ export default function Catalogo () {
 
 //---------------------------------------------------------------------
 
-    <Footer/>
+    <Footer/> */}
     </>
   )
 }
