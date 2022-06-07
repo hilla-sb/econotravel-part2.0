@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function login(){
+export default function Login(){
     return(
         <div>
             <img>logo</img>
@@ -12,13 +12,13 @@ export default function login(){
 //----------------------- separador de elementos del formilario--------------------------------
                         <InputLabel htmlFor="psw">Password:</InputLabel>
                         <Input id="psw" type="password" aria-actibeby="password-helper" />
-                        <FormHelperText id="password-helper"></FormHelperText>
+                        <FormHelperText id="password-helper">Escribe tu contrasena</FormHelperText>
 //----------------------- separador de elementos del formilario--------------------------------
                         <button>Login</button>
                     </form>
                 <p>Haz click </p>
                 <link>aqui</link>
-                <p>si todavia no te has registrado</p>
+                <p> si todavia no te has registrado</p>
             </div>
         </div>
     )

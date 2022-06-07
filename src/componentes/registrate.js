@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function registrate(){
+export default function Registrate(){
     return(
         <div>
             <img>logo</img>
