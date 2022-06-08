@@ -1,10 +1,9 @@
 import './App.css';
-import Navbar from './componentes/Navbar';
-import experiencias from "./experiencias.json";
-/* import Home from './componentes/Home';
-import Login from './componentes/Login';
-import Register from './componentes/Register';
-import Catalogo from './componentes/Catalogo';
+import HomeNav from './componentes/Nav/Navbar.js';
+import Home from './componentes/Home/Home.js';
+/*import Login from './componentes/Login';
+import Register from './componentes/Register'; 
+import Catalogo from './componentes/Catalogo'; 
 import Detalle from './componentes/Detalle';
 import Reserva from './componentes/Reserva';
 import DetalleLogged from './componentes/DetalleLogged';
@@ -17,19 +16,16 @@ function App() {
   
   return (
     <div>
-      
-      
-      <Navbar/>
-
-      {/* <Home/>
-      <Login/>
-      <Register/>
-      <Catalogo/> 
-      <Detalle/>
-      <Reserva/>
-      <DetalleLogged/>
-      <ContactUs/>
-      <Footer/> */}
+     <HomeNav/>
+     <Home/>
+     {/* <Login/>
+     <Register/> 
+     <Catalogo/> 
+     <Detalle/>
+     <Reserva/>
+     <DetalleLogged/>
+     <ContactUs/>
+     <Footer/> */}
     </div>
   );
 }
