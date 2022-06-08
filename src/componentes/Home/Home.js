@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroImg from './HeroImg';
+import HeroImg from './heroimage/HeroImg';
 /* import Destacados from '../Catalogo/Destacados';
 import TravelAny from './TravelAny';
 import Descuento from './Descuento'; */

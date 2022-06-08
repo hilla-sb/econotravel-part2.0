@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Nav.js/Navbar.js.js';
+import Navbar from './Nav.js/Navbar.js.js.js';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
-import Footer from './Footer.js';
+import Footer from './Footer.js.js';
 import experiencias from '../../experiencias.json';
 
 

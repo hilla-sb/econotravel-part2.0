@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../Nav/Navbar';
+import Navbar from '../nav/Navbar';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 //import Card from 'react-bootstrap/Card';
 //import { Button } from 'react-bootstrap';
