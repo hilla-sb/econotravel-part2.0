@@ -1,31 +1,18 @@
 import './App.css';
-import HomeNav from './componentes/Nav/Navbar.js';
-import Home from './componentes/Home/Home.js';
-/*import Login from './componentes/Login';
-import Register from './componentes/Register'; 
-import Catalogo from './componentes/Catalogo'; 
-import Detalle from './componentes/Detalle';
-import Reserva from './componentes/Reserva';
-import DetalleLogged from './componentes/DetalleLogged';
-import ContactUs from './componentes/ContactUs';
-import Footer from './componentes/Footer'; */
+import HomeNav from './componentes/Nav/Navbar';
+import Home from './componentes/Home/Home';
+//import Destacados from './componentes/Home/Destacados'; 
+import Footer from './componentes/Footer/Footer';
+
 
 function App() {
-  
-  console.log(experiencias);
-  
+    
   return (
     <div>
      <HomeNav/>
      <Home/>
-     {/* <Login/>
-     <Register/> 
-     <Catalogo/> 
-     <Detalle/>
-     <Reserva/>
-     <DetalleLogged/>
-     <ContactUs/>
-     <Footer/> */}
+     {/*<Destacados/>*/}
+     <Footer/>
     </div>
   );
 }

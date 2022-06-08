@@ -1,11 +1,14 @@
 import React from "react";
+import { Form, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+
 
 export default function Login(){
     return(
         <div className="login-pg">
             <img src="" alt="">logo</img>
             <div>
-                    <form>{/* (ESTE ES MATERIAL UI!!!!!!!) */}
+                    <Form>{/* (ESTE ES MATERIAL UI!!!!!!!) */}
                         <InputLabel htmlFor="name">Name:</InputLabel>
                         <Input id="name" aria-actibeby="nombre" />
                         <FormHelperText id="nombre">Tu nombre </FormHelperText>
@@ -14,10 +17,10 @@ export default function Login(){
                         <Input id="psw" type="password" aria-actibeby="password-helper" />
                         <FormHelperText id="password-helper"></FormHelperText>
 //----------------------- separador de elementos del formulario--------------------------------
-                        <button>Login</button>
-                    </form>
+                        <Button>Login</Button>
+                    </Form>
                 <p>Haz click </p>
-                {/* <link>aqui</link> */}
+                <Link>aqui</Link>
                 <p>si todavia no te has registrado</p>
             </div>
         </div>

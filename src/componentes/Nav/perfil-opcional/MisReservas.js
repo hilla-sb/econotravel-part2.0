@@ -1,5 +1,7 @@
 import React from 'react';
-import Perfil from '../Perfil';
+import Perfil from './Perfil';
+
+// pagina mis reservas/* opcional
 
 export default function MisReservas () {
   return (

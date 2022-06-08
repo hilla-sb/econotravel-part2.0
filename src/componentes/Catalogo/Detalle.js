@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Nav/Navbar.js';
+import Navbar from '../Nav/Navbar';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import Card from 'react-bootstrap/Card'
-import { Button } from 'react-bootstrap';
+//import Card from 'react-bootstrap/Card';
+//import { Button } from 'react-bootstrap';
 
 export default function Detalle () {
   return (

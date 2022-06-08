@@ -26,8 +26,8 @@ export default function HomeNav () {
                 <NavDropdown title="Link Gorila" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Mi perfil</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">Mis reservas</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
                   <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
                 </NavDropdown>
 
                 <Nav.Link href="#link">Link "Cesta compra"</Nav.Link>

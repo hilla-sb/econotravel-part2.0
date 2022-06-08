@@ -1,11 +1,12 @@
 import React from "react";
+import {Form, Button} from 'react-bootstrap';
 
 export default function Registrate(){
     return(
         <div>
             <img>logo</img>
             <div>
-                    <form>
+                    <Form>
                         <InputLabel htmlFor="name">Name:</InputLabel>
                         <Input id="name" aria-actibeby="nombre" />
                         <FormHelperText id="nombre">Tu nombre </FormHelperText>
@@ -17,10 +18,10 @@ export default function Registrate(){
                         <InputLabel htmlFor="psw">Password:</InputLabel>
                         <Input id="psw" type="password" aria-actibeby="password-helper" />
                         <FormHelperText id="password-helper">Repite contrasena</FormHelperText>
-                        <button>Registrate</button>
-                    </form>
+                        <Button>Registrate</Button>
+                    </Form>
                 <p>Haz click </p>
-                <link>aqui</link>
+                <Link>aqui</Link>
                 <p>si ya te has registrado</p>
             </div>
         </div>

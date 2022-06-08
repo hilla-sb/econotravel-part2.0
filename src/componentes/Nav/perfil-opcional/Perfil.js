@@ -1,6 +1,8 @@
 import React from 'react';
 import MisReservas from './MisReservas';
 
+// pagina mi perfil/* opcional
+
 export default function Perfil () {
   return (
     <div className="perfil">

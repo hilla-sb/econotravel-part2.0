@@ -2,10 +2,13 @@ import React from 'react';
 import Navbar from './Nav.js/Navbar.js.js';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
-import Footer from './Footer.js'; 
+import Footer from './Footer.js';
+import experiencias from '../../experiencias.json';
 
 
 export default function Catalogo () {
+  console.log(experiencias);
+  
   return (
     <div classname="catalogo">
       <Navbar/>

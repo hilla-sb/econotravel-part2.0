@@ -1,13 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function Destacados () {
   return (
     
     <div className="destacados"> 
         <h1>Experiencias en el área de Barcelona</h1>
-        <link>Ubicación</link> 
-        <link>Transporte</link>
-        <link>Duración</link>  
+        <Link>Ubicación</Link> 
+        <Link>Transporte</Link>
+        <Link>Duración</Link>  
 
 
 
@@ -23,10 +25,11 @@ export default function Destacados () {
           <p>Precio</p>    
       </div>
       <div>
-        <link>Reserva ahora</link>
+        <Link>Reserva ahora</Link>
       </div>
       </div>
-    </div> 
+
+    </div>
 
 /* //___________________________________________________________
 
@@ -42,7 +45,7 @@ export default function Destacados () {
           <p>Precio</p>    
       </div>
       <div>
-        <link>Reserva ahora</link>
+        <Link>Reserva ahora</Link>
       </div>
       </div> 
 
@@ -51,9 +54,9 @@ export default function Destacados () {
       <div>
         <img src="" alt="" href="">Exp 3</img>
         <div><h1>Experiencias en el área de Barcelona</h1>
-        <link>Ubicación</link> 
-        <link>Transporte</link>
-        <link>Duración</link>  
+        <Link>Ubicación</Link> 
+        <Link>Transporte</Link>
+        <Link>Duración</Link>  
 
 
 
@@ -69,7 +72,7 @@ export default function Destacados () {
           <p>Precio</p>    
       </div>
       <div>
-        <link>Reserva ahora</link>
+        <Link>Reserva ahora</Link>
       </div>
       </div>
     </div>
@@ -82,8 +85,8 @@ export default function Destacados () {
           <p>Precio</p>    
       </div>
       <div>
-        <link>Reserva ahora</link>
+        <Link>Reserva ahora</Link>
       </div>
-  </div> 
+  </div> */
   )
-}*/
+}
