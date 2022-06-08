@@ -4,18 +4,30 @@
   font-family: Arial, Helvetica, Sans-serif;
 }
 
+/* -------------------------NAVBAR------------------------- */
 .navbar{
   background-color: #F1AE89;
   width: 100%;
   height: 30vh;
 }
 
+.all-nav{
+  height: 3vh;
+}
+
+.barra-busqueda{
+  background-color: whitesmoke;
+}
+
+.icono-lupa{
+  width: 3vh;
+}
+
+.icono-cesta{
+  width: 3vh;
+}
+
+/* -------------------------HERO IMAGE------------------------- */
 .hero-img{
   background-color: #DFF3E3;
 }
-
-/* #btn-hero-img{
-  position: absolute;   hace falta media queries
-  bottom: 15rem;
-  margin:  2rem;
-} */
