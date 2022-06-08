@@ -1,5 +1,5 @@
 import React from 'react';
-import Perfil from './Perfil';
+import Perfil from './MiPerfil';
 
 // pagina mis reservas/* opcional
 

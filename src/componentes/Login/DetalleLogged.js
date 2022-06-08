@@ -1,7 +1,7 @@
 import React from 'react';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import Perfil from './perfil-opcional/Perfil';
-import MisReservas from './perfil-opcional/MisReservas';
+import MisReservas from '../nav/perfil-opcional/MisReservas';
 
 export default function Detallelogged () {
   return (
