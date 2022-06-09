@@ -15,7 +15,7 @@ export default function Destacados() {
       <Link>Duración</Link> */}
 
       <div>
-        <img src={el.img} />
+        <img width={"400px"} src={el.img} />
         <div>
           <button >{el.eti1}</button>
           <button >{el.eti2}</button>
