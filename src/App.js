@@ -19,20 +19,4 @@ function App() {
   );
 }
 
-<<<<<<< HEAD
-// return (
-//   <BrowserRouter>
-//     <div className="App">
-//       <Routes>
-//         <Route path="/" element={<MainPage />} />
-//         <Route path="experiences" element={<ExperiencePage />} />
-//          <Route path="profile" element={<Profile />} />
-//       </Routes>
-//     </div>
-//   </BrowserRouter>
-
-
-
-=======
->>>>>>> 4fbe6be4406fc123543ee02e6101493db821447f
 export default App;
