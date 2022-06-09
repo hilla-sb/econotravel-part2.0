@@ -15,6 +15,9 @@ function App() {
     <BrowserRouter>
       <Navbar/>
       <Home/>
+      <Destacados/>
+      <h1>catalogooooooooooooooooooooooooo</h1>
+      <Catalogo/>
       <Footer/>
     </BrowserRouter>
   );
