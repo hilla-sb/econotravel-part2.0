@@ -1,19 +1,18 @@
 import './App.css';
 import HomeNav from './componentes/nav/Navbar';
 import Home from './componentes/home/Home';
-//import Destacados from './componentes/Home/Destacados'; 
+import Destacados from './componentes/home/Destacados'; 
 import Footer from './componentes/footer/Footer';
+import { BrowserRouter } from 'react-router-dom'
+
 
 
 function App() {
     
   return (
-    <div>
-     <HomeNav/>
-     <Home/>
-     {/*<Destacados/>*/}
-     <Footer/>
-    </div>
+    <BrowserRouter>
+     <Destacados/>
+    </BrowserRouter>
   );
 }
 

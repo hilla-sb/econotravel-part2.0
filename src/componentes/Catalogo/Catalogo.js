@@ -1,19 +1,32 @@
 import React from 'react';
-import Navbar from './Nav.js/Navbar.js.js.js';
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
-import Footer from './Footer.js.js';
-import experiencias from '../../experiencias.json';
-
+import catalogo from '../../experiencias.json';
 
 export default function Catalogo () {
-  console.log(experiencias);
+  console.log(catalogo);
+  let listaCatalogo = catalogo;
   
-  return (
-    <div classname="catalogo">
-      <Navbar/>
+  return listaCatalogo.map((el, i) => (
 
-      <CardGroup>
+    
+    <div classname="catalogo">
+
+      <div>
+        <img src={el.img}/>
+        <div>
+          <button style='text'>{el.eti1}</button>
+          <button style='text'>{el.eti2}</button>
+          <button style='text'>{el.eti3}</button>
+        </div>
+        <div>
+          <p>{el.eti1}</p>
+          <p>{el.precio}</p>
+        </div>
+        <link>Reserva ahora</link>
+      </div>
+
+      {/* <CardGroup>
         <Card>
           <Card.Img variant="top" src="https://images.unsplash.com/photo-1530696849033-05770f765d21?ixlib=rb-1.2.1&ixid=MnwxM[…]yMHRyYXZlbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt=" Group riding bicicles in a mountain scenery"/>
           <Card.Body>
@@ -54,7 +67,7 @@ export default function Catalogo () {
             <small className="text-muted">Last updated 3 mins ago</small>
           </Card.Footer>
         </Card>
-      </CardGroup>
+      </CardGroup> */}
 
 
 {/* //---------------------------------------------------------------------
@@ -118,11 +131,7 @@ export default function Catalogo () {
       <div>
         <link>Reserva ahora</link>
       </div>
-      </div>
-
-//---------------------------------------------------------------------
-
-    <Footer/>  */}
+      </div> */}
     </div>
-  )
+  ))
 }
