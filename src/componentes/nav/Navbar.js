@@ -12,7 +12,7 @@ export default function HomeNav () {
     <img
       src={gorilaa}
       alt="Icono gorila"
-      roundedCircle
+      /* roundedcircle */
       style={{ width: '40px' }}
     />
   )
@@ -26,9 +26,9 @@ export default function HomeNav () {
       <img src="" alt="">Cesta</img> */}
 
       
-        <Navbar bg="#" expand="lg">
+        <Navbar bg="#" expand="lg" fixed="top">
           <Container>
-            <Navbar.Brand href="#home"><img src={logo} alt="Logo Econotravel Barcelona desde 2003"/> </Navbar.Brand>
+            <Navbar.Brand href="#home"><img className="logo" src={logo} alt="Logo Econotravel Barcelona desde 2003"/> </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="all-nav">
