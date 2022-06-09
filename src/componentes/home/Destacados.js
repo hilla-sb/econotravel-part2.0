@@ -1,92 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import destacados from '../../experiencias.json';
 
 
-export default function Destacados () {
-  return (
-    
-    <div className="destacados"> 
-        <h1>Experiencias en el área de Barcelona</h1>
-        <Link>Ubicación</Link> 
-        <Link>Transporte</Link>
-        <Link>Duración</Link>  
+export default function Destacados() {
 
+  let listaDestacados = destacados.slice(0,3);
 
+  return listaDestacados.map((el, i) => (
+    <div key={el.id} className="destacados">
+      {/* <h1>Experiencias en el área de Barcelona</h1>
+      <Link>Ubicación</Link>
+      <Link>Transporte</Link>
+      <Link>Duración</Link> */}
 
+      <div>
+        <img width={"400px"} src={el.img} />
         <div>
-        <img src="" alt="" href="">Exp 1</img>
-        <div>
-          <p>Etiqueta 1</p>
-          <p>Etiqueta 2</p>
-          <p>Etiqueta 3</p>
+          <button >{el.eti1}</button>
+          <button >{el.eti2}</button>
+          <button >{el.eti3}</button>
         </div>
-      <div>
-          <p>Ubicación</p>
-          <p>Precio</p>    
-      </div>
-      <div>
-        <Link>Reserva ahora</Link>
-      </div>
-      </div>
-
-    </div>
-
-/* //___________________________________________________________
-
-      <div>
-        <img src="" alt="" href="">Exp 2</img>
         <div>
-          <p>Etiqueta 1</p>
-          <p>Etiqueta 2</p>
-          <p>Etiqueta 3</p>
+          <p>{el.eti1}</p>
+          <p>{el.precio}</p>
         </div>
-      <div>
-          <p>Ubicación</p>
-          <p>Precio</p>    
-      </div>
-      <div>
-        <Link>Reserva ahora</Link>
-      </div>
-      </div> 
-
- //___________________________________________________________ 
-
-      <div>
-        <img src="" alt="" href="">Exp 3</img>
-        <div><h1>Experiencias en el área de Barcelona</h1>
-        <Link>Ubicación</Link> 
-        <Link>Transporte</Link>
-        <Link>Duración</Link>  
-
-
-
-        <div>
-        <img src="" alt="" href="">Exp 1</img>
-        <div>
-          <p>Etiqueta 1</p>
-          <p>Etiqueta 2</p>
-          <p>Etiqueta 3</p>
-        </div>
-      <div>
-          <p>Ubicación</p>
-          <p>Precio</p>    
-      </div>
-      <div>
-        <Link>Reserva ahora</Link>
-      </div>
+        {/* <Link>Reserva ahora</Link> */}
       </div>
     </div>
-          <p>Etiqueta 1</p>
-          <p>Etiqueta 2</p>
-          <p>Etiqueta 3</p>
-        </div>
-      <div>
-          <p>Ubicación</p>
-          <p>Precio</p>    
-      </div>
-      <div>
-        <Link>Reserva ahora</Link>
-      </div>
-  </div> */
-  )
-}
+  ))}
