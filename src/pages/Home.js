@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../componentes/nav/Navbar";
-import HeroImg from "../componentes/home/heroimage/HeroImg";
-import Destacados from "../componentes/home/Destacados";
-import TravelAny from "../componentes/home/TravelAny";
-import Descuento from "../componentes/home/heroimage/Descuento";
-import Footer from "../componentes/footer/Footer";
+import Navbar from '../componentes/Navbar';
+import HeroImg from "../componentes/heroimage/HeroImg";
+//import Destacados from "../componentes/home/Destacados";
+//import TravelAny from "../componentes/TravelAny";
+//import Descuento from "../componentes/heroimage/Descuento";
+import Footer from "../componentes/Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -18,9 +18,12 @@ export default function Home() {
             <Link to="/">Ubicación</Link>
             <Link to="/">Transporte</Link>
             <Link to="/">Duración</Link>
+       
+       
+       {/*
        <Destacados/>
-       <TravelAny/>
-       {/* <Descuento/> */}
+        <TravelAny/>
+        <Descuento/> */}
        <Footer/>       
     </div>
   );
