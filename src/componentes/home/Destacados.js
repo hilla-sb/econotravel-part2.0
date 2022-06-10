@@ -3,6 +3,8 @@ import destacados from '../../experiencias.json';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
+//hola
+
 export default function Destacados() {
 
   let listaDestacados = destacados.slice(0,3);
