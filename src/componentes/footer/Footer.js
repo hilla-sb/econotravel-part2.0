@@ -13,11 +13,11 @@ function Footer() {
     return (
       <div className="foot">
 
-        <Link className="btn btn-outline-light btn-lg" role="button" to="./ComoFunciona"> ¿Cómo funciona? </Link>
+        <Link to="./ComoFunciona" className="btn btn-outline-light btn-lg" role="button" > ¿Cómo funciona? </Link>
 
-        <Link className="btn btn-outline-light btn-lg" role="button" to="./ContactUs"> About Us </Link>
+        <Link to="./ContactUs" className="btn btn-outline-light btn-lg" role="button" > About Us </Link>
 
-        <Link className="btn btn-outline-light btn-lg" role="button" to="./MetodosDePago"> ¿Cómo funciona? </Link>
+        <Link to="./MetodosDePago" className="btn btn-outline-light btn-lg" role="button" > ¿Cómo funciona? </Link>
 
       </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import catalogo from '../../experiencias.json';
+import catalogo from '../experiencias.json';
 import { Link } from 'react-router-dom';
 
 export default function Catalogo () {

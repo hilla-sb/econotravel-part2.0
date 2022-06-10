@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../nav/Navbar";
-import HeroImg from "./heroimage/HeroImg";
-import Destacados from "../home/Destacados";
-import TravelAny from "./TravelAny";
-import Descuento from "../home/heroimage/Descuento";
-import Footer from "../footer/Footer";
+import Navbar from "../componentes/nav/Navbar";
+import HeroImg from "../componentes/home/heroimage/HeroImg";
+import Destacados from "../componentes/home/Destacados";
+import TravelAny from "../componentes/home/TravelAny";
+import Descuento from "../componentes/home/heroimage/Descuento";
+import Footer from "../componentes/footer/Footer";
 import { Link } from "react-router-dom";
 
 export default function Home() {

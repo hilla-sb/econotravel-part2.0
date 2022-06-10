@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import imgexperiencias from '../../experiencias.json';
+import imgexperiencias from '../experiencias.json';
 
 export default function Reserva () {
   return (
