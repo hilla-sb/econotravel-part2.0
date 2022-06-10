@@ -1,7 +1,6 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
-import CardGroup from 'react-bootstrap/CardGroup'
 import catalogo from '../../experiencias.json';
+import { Link } from 'react-router-dom';
 
 export default function Catalogo () {
 
@@ -11,6 +10,10 @@ export default function Catalogo () {
 
     
     <div classname="catalogo">
+      <h1>Experiencias en el área de Barcelona</h1>
+      <Link to='/'>Ubicación</Link>
+      <Link to='/'>Transporte</Link>
+      <Link to='/'>Duración</Link>
 
       <div>
         <img width={"400px"} heigh={"600px"} src={el.img}/>

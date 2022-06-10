@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import destacados from '../../experiencias.json';
-import Catalogo from '../catalogo/Catalogo';
-import { Button } from 'react-bootstrap';
-import { Linkx } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,10 +11,10 @@ export default function Destacados() {
 
   return listaDestacados.map((el, i) => (
     <div key={el.id} className="destacados">
-       <h1 onClick={Catalogo}>Experiencias en el área de Barcelona</h1>
-      <Link.Text>Ubicación</Link.Text>
-      <Link.Text>Transporte</Link.Text>
-      <Link.Text>Duración</Link.Text>
+       <h1>Experiencias en el área de Barcelona</h1>
+      <Link to="/">Ubicación</Link>
+      <Link to="/">Transporte</Link>
+      <Link to="/">Duración</Link>
       <div>
         <img width={"400px"} src={el.img} />
         <div>
@@ -28,7 +26,7 @@ export default function Destacados() {
           <p>{el.eti1}</p>
           <p>{el.precio}</p>
         </div>
-        <Link.Text onClick={Reserva} >Reserva ahora</Link.Text>
+        <Link to="/">Reserva ahora</Link>
       </div>
     </div>
   ))}
