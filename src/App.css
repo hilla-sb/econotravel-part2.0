@@ -4,12 +4,52 @@
   font-family: Arial, Helvetica, Sans-serif;
 }
 
+/* -------------------------NAVBAR------------------------- */
 .navbar{
-  background-color: #F1AE89;
+  background-color: #FFE6E6;
   width: 100%;
-  height: 30vh;
+  height: 10vh;
+  display: flex;
+  /* justify-content: space-between; */
 }
 
+.all-nav{
+  height: 3vh;
+}
+
+.logo{
+  width: 10vh;
+}
+
+.barra-busqueda{
+  background-color: whitesmoke;
+}
+
+.icono-lupa{
+  width: 3vh;
+}
+
+.icono-cesta{
+  width: 3vh;
+}
+
+/* -------------------------HERO IMAGE------------------------- */
 .hero-img{
-  background-color: #DFF3E3;
+  background-color: #4B8673;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image{
+  max-width: 90%;
+}
+
+@media (max-width: 667px) {
+  .hero-image{
+  }
+}
+
+.descubre-mas{
+  position: absolute;
 }
