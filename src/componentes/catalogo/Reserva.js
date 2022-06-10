@@ -1,10 +1,11 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 
 export default function Reserva () {
   return (
     <div className="reserva">
-        <img src="" href="" alt=""></img>
+        <img src="" href="" alt=""/>
         <h1>Formulario de reserva</h1>
         <div>Reserva</div>
         
