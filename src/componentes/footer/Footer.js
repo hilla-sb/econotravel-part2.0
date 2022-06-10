@@ -1,12 +1,25 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import React, { useState } from "react";
+import ComoFunciona from "./ComoFunciona";
+import ContactUs from "./ContactUs";
+import MetodosDePago from "./MetodosDePago";
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
-export default function Footer(){
-    return(
-        <div className="footer">
-            <Button>Como funciona?</Button>
-            <Button>Quienes somos?</Button>
-            <Button>Medios de pago</Button>
-        </div>
+function Footer() {
+    const pagos = useState();
+    function handleClick(path) {
+      pagos.push(path);
+    }
+    return (
+      <div className="foot">
+
+        <Link className="btn btn-outline-light btn-lg" role="button" to="./ComoFunciona"> ¿Cómo funciona? </Link>
+
+        <Link className="btn btn-outline-light btn-lg" role="button" to="./ContactUs"> About Us </Link>
+
+        <Link className="btn btn-outline-light btn-lg" role="button" to="./MetodosDePago"> ¿Cómo funciona? </Link>
+
+      </div>
     )
-}
+  }
+  export default Footer;
