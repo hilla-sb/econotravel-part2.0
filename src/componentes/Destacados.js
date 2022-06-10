@@ -1,5 +1,5 @@
 import React from "react";
-import destacados from "../../experiencias.json";
+import destacados from '../experiencias.json';
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
@@ -12,7 +12,7 @@ export default function Destacados() {
       <Container fluid="xl">
       <Row>
         <Col xs={9}>
-        <img width={"400px"} src={el.img} />
+        <img alt="experience" width={"400px"} src={el.img} />
         <div className="mr-auto p-2">
           <Button variant="secondary">{el.eti1}</Button>
           <Button variant="secondary">{el.eti2}</Button>
