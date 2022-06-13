@@ -2,15 +2,15 @@ import React from 'react';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 /* import Perfil from './Perfil';
 import MisReservas from './MisReservas'; */
-import logo from './images/Logo1.png';
-import lupa from './images/lupa.jpg';
-import gorilaa from './images/gorilaa.png';
-import cestaa from './images/cestaa.png'
+import logo from './img/logotrans1.png';
+import lupa from './img/icons/lupa.jpg';
+import gorila from './img/icons/gorila.png';
+import cesta from './img/icons/cesta.png';
 
 export default function HomeNav () {
   const UserMenu = (
     <img
-      src={gorilaa}
+      src={gorila}
       alt="Icono gorila"
       /* roundedcircle */
       style={{ width: '40px' }}
@@ -41,7 +41,7 @@ export default function HomeNav () {
                   <NavDropdown.Item href="#action/3.3">Logout</NavDropdown.Item>
                 </NavDropdown>*/}
 
-                <Nav.Link href="#link"><img className="icono-cesta" src={cestaa} alt="Icono cesta de la compra"/> </Nav.Link>
+                <Nav.Link href="#link"><img className="icono-cesta" src={cesta} alt="Icono cesta de la compra"/> </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

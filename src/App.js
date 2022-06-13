@@ -7,7 +7,7 @@ import DetalleLogged from "./pages/DetalleLogged";
 //import MiPerfil from "./pages/MiPerfil";
 //import MisReservas from "./pages/MisReservas";
 import ComoFunciona from "./pages/ComoFunciona";
-import ContactUs from "./pages/ContactUs";
+import QuienesSomos from "./pages/ContactUs";
 import Pago from "./pages/MetodosDePago";
 import Registrate from "./pages/Registrate";
 
@@ -24,7 +24,7 @@ function App() {
 
           {/*Footer*/}
           <Route path="/comofunciona" element={<ComoFunciona />} />
-          <Route path="/quienessomos" element={<ContactUs />} />
+          <Route path="/quienessomos" element={<QuienesSomos />} />
           <Route path="/metodosdepago" element={<Pago />} />
 
         </Routes>

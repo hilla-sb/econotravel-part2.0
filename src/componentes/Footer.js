@@ -12,9 +12,9 @@ function Footer() {
 
         <Link to="./comofunciona" > ¿Como funciona? </Link>
 
-        <Link to="./ContactUs" > About Us </Link>
+        <Link to="./quienessomos" > ¿Quienes somos? </Link>
 
-        <Link to="./MetodosDePago" > ¿Cómo funciona? </Link>
+        <Link to="./metodosdepago" > Métodos de Pago </Link>
 
       </div>
     )
