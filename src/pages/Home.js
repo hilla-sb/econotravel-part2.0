@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../componentes/Navbar";
-import HeroImg from "../componentes/heroimage/HeroImg";
+import HeroImg from "../componentes/HeroImg";
 import Destacados from '../componentes/Destacados';
 //import TravelAny from './componentes/TravelAny;
 //import Descuento from "./componentes/heroimage/Descuento";

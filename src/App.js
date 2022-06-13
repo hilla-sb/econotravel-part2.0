@@ -7,7 +7,7 @@ import DetalleLogged from "./pages/DetalleLogged";
 //import MiPerfil from "./pages/MiPerfil";
 //import MisReservas from "./pages/MisReservas";
 import ComoFunciona from "./pages/ComoFunciona";
-import QuienesSomos from "./pages/ContactUs";
+import QuienesSomos from "./pages/QuienesSomos";
 import Pago from "./pages/MetodosDePago";
 import Registrate from "./pages/Registrate";
 
