@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import imgexperiencias from '../experiencias.json';
+import CheckList from '../componentes/img/icons/checklist.png';
 
 export default function Reserva () {
   return (
@@ -15,9 +16,9 @@ export default function Reserva () {
               <p>Quantidad: 1</p>
               <Button/>
           <h6>Garantías Econotravel:</h6>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs_DW0QUJj3qFpswqKgYi5ERup3ioUz2NOQ&usqp=CAU " alt="icono checklist">99% de clientes satisfechos</img>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs_DW0QUJj3qFpswqKgYi5ERup3ioUz2NOQ&usqp=CAU " alt="icono checklist">Colaboradores de calidad</img>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXs_DW0QUJj3qFpswqKgYi5ERup3ioUz2NOQ&usqp=CAU " alt="icono checklist">Pago 100% seguro</img>
+          <img src={CheckList} alt="icono checklist">99% de clientes satisfechos</img>
+          <img src={CheckList} alt="icono checklist">Colaboradores de calidad</img>
+          <img src={CheckList} alt="icono checklist">Pago 100% seguro</img>
         </div>
     </div>
   )

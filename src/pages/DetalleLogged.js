@@ -1,19 +1,22 @@
-import React from 'react';
+{/*import React from 'react';
 import DropdownMenu from 'react-bootstrap/esm/DropdownMenu';
 import Perfil from './perfil-opcional/Perfil';
 import MisReservas from '../componentes/nav/perfil-opcional/MisReservas';
 
-export default function Detallelogged () {
+export default function DetalleLogged () {
   return (
     <div className="detallelog">
         <img src="" alt="">Gorila</img>
-        <DropdownMenu>Mi perfil<Perfil/> Mis reservas<MisReservas/> Logout</DropdownMenu>
+        <DropdownMenu>
+          Mi perfil<Perfil/>
+
+           Mis reservas<MisReservas/> Logout</DropdownMenu>
         <img src="" alt="">Cesta</img>
     </div>
     )
   }
 
-  {/* <div className="navbar">
+   <div className="navbar">
         <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand href="#home"><img src={logo} alt="Logo Econotravel Barcelona desde 2003"/> </Navbar.Brand>
