@@ -17,12 +17,15 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/reserva" element={<Reserva />} />
+
+          {/*SIGNUP*/}
           <Route path="/detallelogged" element={<DetalleLogged />} />
           <Route path="/registrate" element={<Registrate />} />
 
-          {/*Footer*/}
+          {/*FOOTER*/}
           <Route path="/comofunciona" element={<ComoFunciona />} />
           <Route path="/quienessomos" element={<QuienesSomos />} />
           <Route path="/metodosdepago" element={<Pago />} />
