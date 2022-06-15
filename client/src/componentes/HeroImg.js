@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import '../componentes/HeroImg.css';
+import './HeroImg.css';
 
 /* import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'; */
