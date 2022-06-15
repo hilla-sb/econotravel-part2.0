@@ -10,6 +10,7 @@ import ComoFunciona from "./pages/ComoFunciona";
 import QuienesSomos from "./pages/QuienesSomos";
 import Pago from "./pages/MetodosDePago";
 import Registrate from "./pages/Registrate";
+import Detalle from './componentes/Detalle'
 
 function App() {
   return (
@@ -20,15 +21,17 @@ function App() {
 
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/reserva" element={<Reserva />} />
+          <Route path="/detalle/:id" element={<Detalle />} />
+{/* 
 
-          {/*SIGNUP*/}
+       
           <Route path="/detallelogged" element={<DetalleLogged />} />
           <Route path="/registrate" element={<Registrate />} />
 
-          {/*FOOTER*/}
+
           <Route path="/comofunciona" element={<ComoFunciona />} />
           <Route path="/quienessomos" element={<QuienesSomos />} />
-          <Route path="/metodosdepago" element={<Pago />} />
+          <Route path="/metodosdepago" element={<Pago />} /> */}
 
         </Routes>
       </div>
