@@ -1,3 +1,5 @@
+import { ListItem } from '@mui/material';
+import { render } from '@testing-library/react';
 import React from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import detalle from '../experiencias.json';
@@ -7,19 +9,49 @@ import { UseFetch } from './UseFetch';
 //import { Button } from 'react-bootstrap';
 
 export default function Detalle () {
-  let detalleExpereincia = detalle;
+  
+    // render(
+    //   {
+    //     let items = this.state.items;
+    //     if(this.state.filte){
+    //       items= items.filter(item =>
+    //         item.name.toLowerCase()
+    //         .includes(this.state.filter.toLowerCase()))
+    //     }
+    //   }
+    // )
 
-  return detalleExpereincia.map((el, i) => (
-      <div key={el.id} className="detalle">
-    
-        <h1>{el.name}</h1>
-        <img alt="experience" width={"400px"} src={el.img} />
-        <p>{el.descripcion}</p>
-        <p>{el.precio}</p>
-      </div>
-    ))
 
+
+  return(
+    <div>
+      {/* {
+        items.map
+      } */}
+    </div>
+  )
+  
 }
+
+
+//let detalleExpereincia = detalle;
+
+
+// return detalleExpereincia.map((el, i) => (
+//   <div key={el.id} className="detalle">
+
+//     <h1>{el.name}</h1>
+//     <img alt="experience" width={"400px"} src={el.img} />
+//     <p>{el.descripcion}</p>
+//     <p>{el.precio}</p>
+//   </div>
+// ))
+
+
+
+
+
+
 
 // const {data, error, loading} = UseFetch('http://localhost:3000/catalogo')
 
