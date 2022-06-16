@@ -10,7 +10,9 @@ export default function Reserva () {
         <h1>Formulario de reserva</h1>
         <div>Reserva</div>
         
-        <div className="reserva">
+        <div className="card">
+        <div className='card-title'>
+        <div className='card-text'>
               <p>Precio</p>
               <p>Experiencia Reservada:</p>
               <p>Quantidad: 1</p>
@@ -19,6 +21,8 @@ export default function Reserva () {
           <img src={CheckList} alt="icono checklist">99% de clientes satisfechos</img>
           <img src={CheckList} alt="icono checklist">Colaboradores de calidad</img>
           <img src={CheckList} alt="icono checklist">Pago 100% seguro</img>
+          </div>
+          </div>
         </div>
     </div>
   )

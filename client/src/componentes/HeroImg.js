@@ -1,12 +1,14 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import './HeroImg.css';
 
 /* import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'; */
 
 export default function Heroimg() {
   return (
-    <div>
+    <div className="card">
+    <div className="card-title">
       <div className="heroimg">
         <img
           className="himage"
@@ -18,6 +20,7 @@ export default function Heroimg() {
         <Button  href="/catalogo">
           DESCUBRE MÁS
         </Button>{" "}
+      </div>
       </div>
     </div>
   );

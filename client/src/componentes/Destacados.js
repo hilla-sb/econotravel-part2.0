@@ -12,7 +12,9 @@ export default function Destacados() {
       <Container fluid="xl">
       <Row>
         <Col xs={9}>
+          <Link to={`/detalle/${el.id}`}>
         <img alt="experience" width={"400px"} src={el.img} />
+        </Link>
         <div className="mr-auto p-2">
           <Button variant="secondary">{el.eti1}</Button>
           <Button variant="secondary">{el.eti2}</Button>

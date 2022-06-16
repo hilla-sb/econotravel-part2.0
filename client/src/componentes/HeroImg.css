@@ -1,6 +1,6 @@
 /* .heroimg {
   display: flex;
-  height: 100px;
+  height: auto;
   
 }
 
@@ -8,4 +8,5 @@ button > .heroimg {
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+  
+}
