@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import data from '../experiencias.json';
-
 import { Nav } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-/* import Perfil from './Perfil';
-import MisReservas from './MisReservas'; */
 import logo from '../assets/logotrans1.png';
 import lupa from '../assets/icons/lupa.jpg';
 import gorila from '../assets/icons/gorila.png';
@@ -19,7 +16,6 @@ export default function HomeNav () {
         <Link to='/' className="navbar-logo">
           <img className="logo" src={logo} alt="Logo Econotravel Barcelona desde 2003"/>
         </Link>
-        
         
           <div className="searchInput">
             <input id="search-bar" type="text" placeholder="Busca una actividad, un lugar,..." onChange={(event) => {
@@ -48,16 +44,12 @@ export default function HomeNav () {
                 })
             }
           </div>
-
-        
-        {/* <Link className="">
+          
+        <div className="iconos">
           <img className="icono-gorila" src={gorila} alt="Icono gorila"/>
-      
-
           <img className="icono-cesta" src={cesta} alt="Icono cesta de la compra"/>
-        </Link>  */}
+        </div>
       </Nav>
-
       </>
   )
 }
