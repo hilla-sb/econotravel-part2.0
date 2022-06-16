@@ -1,16 +1,14 @@
 import React, {useState} from 'react';
 import data from '../experiencias.json';
-
 import { Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-/* import Perfil from './Perfil';
-import MisReservas from './MisReservas'; */
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/logotrans1.png';
 import lupa from '../assets/icons/lupa.jpg';
 import gorila from '../assets/icons/gorila.png';
 import cesta from '../assets/icons/cesta.png';
 
 export default function HomeNav () {
+  let navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   return(
     <>
@@ -19,20 +17,19 @@ export default function HomeNav () {
           <img className="logo" src={logo} alt="Logo Econotravel Barcelona desde 2003"/>
         </Link>
         
-        
           <div className="searchInput">
             <input id="search-bar" type="text" placeholder="Busca una actividad, un lugar,..." onChange={(event) => {
+              event.preventDefault();
               setSearchTerm(event.target.value);
             }} />
-            <img className="icono-lupa" src={lupa} alt="Icono lupa"/>          
+            <img className="icono-lupa" src={lupa} alt="Icono lupa" onClick={()=> {navigate("/catalogo", { replace: true });}}/>          
           </div>
           <div>
-            {
-              data
+            { searchTerm!==null && data
                 .filter((val) => {
                   if(searchTerm == ""){
                     return val;
-                  }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                  }else if(val.descripcion.toLowerCase().includes(searchTerm.toLowerCase())){
                     return val;
                   }
                 })
@@ -47,16 +44,12 @@ export default function HomeNav () {
                 })
             }
           </div>
-
-        
-        {/* <Link className="">
+          
+        <div className="iconos">
           <img className="icono-gorila" src={gorila} alt="Icono gorila"/>
-      
-
           <img className="icono-cesta" src={cesta} alt="Icono cesta de la compra"/>
-        </Link>  */}
+        </div>
       </Nav>
-
       </>
   )
 }

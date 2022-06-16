@@ -1,15 +1,48 @@
 import { render } from '@testing-library/react';
-import React from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import detalle from '../experiencias.json';
 import { UseFetch } from './UseFetch';
+import React, {useState, useEffect} from 'react';
+//import axios from "axios";
+import { useParams } from "react-router-dom";
 
 //import Card from 'react-bootstrap/Card';
 //import { Button } from 'react-bootstrap';
 
 export default function Detalle () {
+  //  const {id} = useParams()
   
-    // render(
+  
+  //   const [data, setData] = useState([])
+  //   const [loading, setLoading] = useState(false)
+    
+  //   useEffect(() => {
+  //     setLoading(true)
+  //     axios.get('')
+  //     //https://econotravel-grupo3.herokuapp.com/experiencias
+  //       .then(res => {
+  //         console.log(res.data)
+  //         setData(res.data);
+  //         setLoading(false)
+  //       })
+  //   }, [])
+
+  //   const experienciaPorId = data.filter(experiencias => experiencias.titulo === id);
+
+  //   if (loading) return <section>Cargando...</section>
+
+  // return experienciaPorId((exp, index) => {
+  //   <div>
+  //     <div key={index}></div>
+  //     <h1>{exp.name}</h1>
+  //   </div>
+
+  // })
+
+}
+
+
+ // render(
     //   {
     //     let items = this.state.items;
     //     if(this.state.filte){
@@ -20,18 +53,7 @@ export default function Detalle () {
     //   }
     // )
 
-
-
-  return(
-    <div>
-      {/* {
-        items.map
-      } */}
-    </div>
-  )
-  
-}
-
+    //----------------------------------------------------------------------------------
 
 //let detalleExpereincia = detalle;
 
@@ -49,7 +71,7 @@ export default function Detalle () {
 
 
 
-
+//--------------------------------------------------------------------
 
 
 // const {data, error, loading} = UseFetch('http://localhost:3000/catalogo')

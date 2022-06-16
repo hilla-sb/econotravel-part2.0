@@ -10,45 +10,138 @@
   width: 100%;
   height: 10vh;
   display: flex;
-  /* justify-content: space-between; */
 }
-
-/* .all-nav{
-  height: 3vh;
-} */
 
 .logo{
   width: 10vh;
 }
 
-#search-bar{
+/*-----------------------NAVBAR BARRA BUSQUEDA---------------*/
+.searchInput{
   background-color: whitesmoke;
+  display: flex;
+}
+
+#search-bar{
+  width: 50vh;
+  border: none;
+  background: transparent;
+  margin: 0;
+  font-size: 16px;
 } 
 
 .icono-lupa{
   width: 3vh;
 } 
+/*-----------------ICONOS GORILA Y CESTA COMPRA--------------*/
+.iconos{
+  display: flex;
+  align-items: center;
+}
 
 .icono-gorila{
-  width: 3vh;
+  width: 4vh;
 }
 
 .icono-cesta{
-  width: 3vh;
+  width: 4vh;
 }
 
 /* -------------------------HERO IMAGE------------------------- */
-.heroimg {
-  display: flex;
-  height: 50%;
-  
+
+.hero-image{
+  width: 100%;
+  /* height: auto; 
+  position: absolute;*/ 
 }
 
-button > .heroimg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+.btn-heroimg{
+  position: absolute;
+  bottom: 38%;
+  left: 46%;
 }
 
 /*-------------------------- DESTACADOS & TITULO -------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  position: absolute; 
+
+  height: auto;
+  padding: 30px;
+  left: 100px; 
+  top: 100px;  
+  bottom: 10%;
+  left: 5%;   
+
+  z-index: 0;
+*/
+
+  
+  
+
+  
