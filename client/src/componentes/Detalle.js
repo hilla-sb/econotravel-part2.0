@@ -11,33 +11,34 @@ import { useParams } from "react-router-dom";
 //import { Button } from 'react-bootstrap';
 
 export default function Detalle () {
-   const {id} = useParams()
+  //  const {id} = useParams()
   
   
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(false)
+  //   const [data, setData] = useState([])
+  //   const [loading, setLoading] = useState(false)
     
-    useEffect(() => {
-      setLoading(true)
-      axios.get('')
-        .then(res => {
-          console.log(res.data)
-          setData(res.data);
-          setLoading(false)
-        })
-    }, [])
+  //   useEffect(() => {
+  //     setLoading(true)
+  //     axios.get('')
+  //     //https://econotravel-grupo3.herokuapp.com/experiencias
+  //       .then(res => {
+  //         console.log(res.data)
+  //         setData(res.data);
+  //         setLoading(false)
+  //       })
+  //   }, [])
 
-    const experienciaPorId = data.filter(experiencias => experiencias.titulo === id);
+  //   const experienciaPorId = data.filter(experiencias => experiencias.titulo === id);
 
-    if (loading) return <section>Cargando...</section>
+  //   if (loading) return <section>Cargando...</section>
 
-  return experienciaPorId((exp, index) => {
-    <div>
-      <div key={index}></div>
-      <h1>{exp.name}</h1>
-    </div>
+  // return experienciaPorId((exp, index) => {
+  //   <div>
+  //     <div key={index}></div>
+  //     <h1>{exp.name}</h1>
+  //   </div>
 
-  })
+  // })
 
 }
 
