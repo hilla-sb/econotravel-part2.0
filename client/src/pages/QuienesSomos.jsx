@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Marina from "../componentes/img/marina.jpg";
-import Logo1 from "../componentes/img/logotrans1.png";
+import Marina from "../assets/marina.jpg";
+import Logo1 from "../assets/logotrans1.png";
 
 const QuienesSomos = () => {
   return (

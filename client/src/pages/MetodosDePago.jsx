@@ -11,7 +11,7 @@ const MetodosDePago = () => {
             <img
               src="https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png"
               className="visa"
-              alt="visa"
+              alt="visa" width={"400px"} 
             />
           </Link>
 
@@ -20,7 +20,7 @@ const MetodosDePago = () => {
             <img
               src="https://www.actualidadecommerce.com/wp-content/uploads/2020/10/paypal.png"
               className="paypal"
-              alt="paypal"
+              alt="paypal" width={"400px"} 
             />
           </Link>
 
@@ -29,7 +29,7 @@ const MetodosDePago = () => {
             <img
               src="https://e7.pngegg.com/pngimages/859/737/png-clipart-wire-transfer-bank-payment-money-electronic-funds-transfer-bank-blue-text.png"
               className="tranferencia"
-              alt="Transferencia"
+              alt="Transferencia" width={"400px"} 
             />
           </Link>
         </div>

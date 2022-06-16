@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import imgexperiencias from '../experiencias.json';
-import CheckList from '../componentes/img/icons/checklist.png';
+import CheckList from '../assets/icons/checklist.png';
 
 export default function Reserva () {
   return (

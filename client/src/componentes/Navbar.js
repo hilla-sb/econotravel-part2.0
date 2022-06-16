@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import MisReservas from './MisReservas'; */
 import logo from '../assets/logotrans1.png';
 import lupa from '../assets/icons/lupa.jpg';
-import gorila from '../assets/iconsgorila.png';
-import cesta from '../assets/cesta.png';
+import gorila from '../assets/icons/gorila.png';
+import cesta from '../assets/icons/cesta.png';
 
 export default function HomeNav () {
   const [searchTerm, setSearchTerm] = useState("");
