@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2d255086.css",
+    "main.js": "/static/js/main.bea86a1b.js",
+    "static/media/marina.jpg": "/static/media/marina.6aa412325073291a345a.jpg",
+    "static/media/lupa.jpg": "/static/media/lupa.94f31a2646daba7c139e.jpg",
+    "static/media/gorila.png": "/static/media/gorila.2dd29e3337a637fdd149.png",
+    "index.html": "/index.html",
+    "main.2d255086.css.map": "/static/css/main.2d255086.css.map",
+    "main.bea86a1b.js.map": "/static/js/main.bea86a1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d255086.css",
+    "static/js/main.bea86a1b.js"
+  ]
+}
