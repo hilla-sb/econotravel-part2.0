@@ -34,22 +34,17 @@
 }
 
 /* -------------------------HERO IMAGE------------------------- */
-.hero-img{
-  background-color: #4B8673;
+.heroimg {
+  display: flex;
+  height: 50%;
+  
+}
+
+button > .heroimg {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
-.hero-image{
-  max-width: 90%;
-}
-
-@media (max-width: 667px) {
-  .hero-image{
-  }
-}
-
-.descubremas{
-  position: absolute;
-}
+/*-------------------------- DESTACADOS & TITULO -------------------------*/

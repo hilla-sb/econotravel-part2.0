@@ -2,10 +2,10 @@ import React from 'react';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 /* import Perfil from './Perfil';
 import MisReservas from './MisReservas'; */
-import logo from './img/logotrans1.png';
-import lupa from './img/icons/lupa.jpg';
-import gorila from './img/icons/gorila.png';
-import cesta from './img/icons/cesta.png';
+import logo from '../assets/logotrans1.png';
+import lupa from '../assets/icons/lupa.jpg';
+import gorila from '../assets/iconsgorila.png';
+import cesta from '../assets/cesta.png';
 
 export default function HomeNav () {
   const UserMenu = (

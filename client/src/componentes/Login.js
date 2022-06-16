@@ -9,8 +9,9 @@ export default function Login(){
             <div>
                     
                 <p>Haz click </p>
-                <Link>aqui</Link>
+                <Link> aqui </Link>
                 <p>si todavia no te has registrado</p>
+
             </div>
         </div>
     )
