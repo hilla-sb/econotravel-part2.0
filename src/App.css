@@ -13,19 +13,23 @@
   /* justify-content: space-between; */
 }
 
-.all-nav{
+/* .all-nav{
   height: 3vh;
-}
+} */
 
 .logo{
   width: 10vh;
 }
 
-.barra-busqueda{
+#search-bar{
   background-color: whitesmoke;
-}
+} 
 
 .icono-lupa{
+  width: 3vh;
+} 
+
+.icono-gorila{
   width: 3vh;
 }
 
