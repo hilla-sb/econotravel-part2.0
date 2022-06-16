@@ -7,10 +7,6 @@ export default function Registrate(){
         <div>
             {/* <img>logo</img>
             <div>
-<<<<<<< HEAD
-=======
-                   
->>>>>>> 3b33b6f59df007be066c40cc7832138a522422a0
                 <p>Haz click </p>
                 <Link>aqui</Link>
                 <p>si ya te has registrado</p>
