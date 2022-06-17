@@ -65,13 +65,13 @@
 /*---------------------- DESTACADOS & TITULO -----------------------*/
 
 .encabezadoDestacados{
-  text-decoration: none;
-  text-decoration-color: green;
-  display: flex;
-  justify-content: center;
-
+    text-decoration: none;
+    color:green;
+    display: flex;
+    justify-content: center;    
 }
 
+/* --------------------------TRAVELANY ------------*/
 
 
 
