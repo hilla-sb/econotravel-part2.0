@@ -1,4 +1,3 @@
-//import { ListItem } from '@mui/material';
 import { render } from '@testing-library/react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import detalle from '../experiencias.json';
@@ -11,37 +10,42 @@ import { useParams } from "react-router-dom";
 //import { Button } from 'react-bootstrap';
 
 export default function Detalle () {
-  //  const {id} = useParams()
+  return(
+    <div>
+      <h1>pagina de detalles pendiente :)</h1>
+    </div>
+  )
   
-  
-  //   const [data, setData] = useState([])
-  //   const [loading, setLoading] = useState(false)
-    
-  //   useEffect(() => {
-  //     setLoading(true)
-  //     axios.get('')
-  //     //https://econotravel-grupo3.herokuapp.com/experiencias
-  //       .then(res => {
-  //         console.log(res.data)
-  //         setData(res.data);
-  //         setLoading(false)
-  //       })
-  //   }, [])
-
-  //   const experienciaPorId = data.filter(experiencias => experiencias.titulo === id);
-
-  //   if (loading) return <section>Cargando...</section>
-
-  // return experienciaPorId((exp, index) => {
-  //   <div>
-  //     <div key={index}></div>
-  //     <h1>{exp.name}</h1>
-  //   </div>
-
-  // })
-
 }
 
+//  const {id} = useParams()
+
+
+//   const [data, setData] = useState([])
+//   const [loading, setLoading] = useState(false)
+  
+//   useEffect(() => {
+//     setLoading(true)
+//     axios.get('')
+//     //https://econotravel-grupo3.herokuapp.com/experiencias
+//       .then(res => {
+//         console.log(res.data)
+//         setData(res.data);
+//         setLoading(false)
+//       })
+//   }, [])
+
+//   const experienciaPorId = data.filter(experiencias => experiencias.titulo === id);
+
+//   if (loading) return <section>Cargando...</section>
+
+// return experienciaPorId((exp, index) => {
+//   <div>
+//     <div key={index}></div>
+//     <h1>{exp.name}</h1>
+//   </div>
+
+// })
 
  // render(
     //   {
@@ -98,20 +102,3 @@ export default function Detalle () {
 
 //  let detalleExpereincia = detalle;
 
-
-
-      {/* <Navbar/>
-       <Breadcrumb>Home. Montaña. Bicicleta.</Breadcrumb> 
-
-      <Breadcrumb>
-          <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-          <Breadcrumb.Item href="#">Montaña</Breadcrumb.Item>
-          <Breadcrumb.Item active>Bicicleta</Breadcrumb.Item>
-      </Breadcrumb>
-
-      
-      <h1>Paseo en bicicleta por el Montseny</h1>
-      <img src="" alt=""/>
-      <p>Descripción de la actividad</p>
-      <p>Disfruta de un hermoso paseo en bicicleta por el increíble Parque Natural del Montseny.</p> */}
-      {/* <Footer/> */}

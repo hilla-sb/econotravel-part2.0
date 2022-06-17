@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
 
+{/*import React, { useEffect, useState } from 'react'
 export const UseFetch = (url) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
@@ -18,4 +18,4 @@ export const UseFetch = (url) => {
   
     return {data, error, loading};
   
-}
+}*/}
