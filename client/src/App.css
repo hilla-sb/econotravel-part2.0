@@ -69,14 +69,13 @@ background-color: #FFE6E6;
 /*---------------------- DESTACADOS & TITULO -----------------------*/
 
 .encabezadoDestacados{
-  text-decoration: none;
-  color: green;
-  display: flex;
-  justify-content: center;
-
+    text-decoration: none;
+    color:green;
+    display: flex;
+    justify-content: center;    
 }
 
-/*---------------------- DESTACADOS------------------------------------------*/
+/* --------------------------TRAVELANY ------------*/
 
 
 
