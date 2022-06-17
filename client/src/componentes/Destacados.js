@@ -9,9 +9,6 @@ export default function Destacados() {
 
   return listaDestacados.map((el, i) => (
     <div key={el.id} className="destacados">
-      <Container fluid="xl">
-      <Row>
-        <Col xs={9}>
           <Link to={`/detalle/${el.id}`}>
         <img alt="experience" width={"400px"} src={el.img} />
         </Link>
@@ -25,9 +22,6 @@ export default function Destacados() {
           <p>{el.precio}</p>
         </div>
         <Link to="/reserva">Reserva ahora</Link>
-        </Col>
-        </Row>
-      </Container>
     </div>
   ));
 }

@@ -7,10 +7,10 @@ export default function Catalogo () {
   let listaCatalogo = catalogo;
   
   return listaCatalogo.map((el, i) => (
-
+  
     
     <div classname="catalogo">
-
+  
       <div>
       <Link to={`/detalle/${el.id}`}>
         <img width={"400px"} heigh={"600px"} src={el.img}/>
@@ -24,9 +24,9 @@ export default function Catalogo () {
           <p>{el.eti1}</p>
           <p>{el.precio}</p>
         </div>
-        {/* <link>Reserva ahora</link> */}
+        <Link to='/reserva'>Reserva ahora</Link>
       </div>
-
+  
     
     </div>
   ))

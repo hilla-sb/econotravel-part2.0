@@ -22,16 +22,12 @@ function App() {
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/reserva" element={<Reserva />} />
           <Route path="/detalle/:id" element={<Detalle />} />
-{/* 
-
-       
-          <Route path="/detallelogged" element={<DetalleLogged />} />
-          <Route path="/registrate" element={<Registrate />} />
-
-
           <Route path="/comofunciona" element={<ComoFunciona />} />
           <Route path="/quienessomos" element={<QuienesSomos />} />
-          <Route path="/metodosdepago" element={<Pago />} /> */}
+          <Route path="/metodosdepago" element={<Pago />} /> 
+{/* //esto todavia no anda pero hay que hacerlo */}
+{/* <Route path="/detallelogged" element={<DetalleLogged />} />
+  <Route path="/registrate" element={<Registrate />} />*/}
 
         </Routes>
       </div>
