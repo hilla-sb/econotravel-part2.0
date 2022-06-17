@@ -10,9 +10,9 @@ export default function Destacados() {
   return listaDestacados.map((el, i) => (
     <div key={el.id} className="destacados">
           <Link to={`/detalle/${el.id}`}>
-        <img alt="experience" width={"400px"} src={el.img} />
+        <img alt="experience" width={"400px"} className='imagenDestacados' src={el.img} />
         </Link>
-        <div className="mr-auto p-2">
+        <div className="etiquetasDetalle">
           <Button variant="secondary">{el.eti1}</Button>
           <Button variant="secondary">{el.eti2}</Button>
           <Button variant="secondary">{el.eti3}</Button>
