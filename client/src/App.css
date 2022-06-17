@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, Sans-serif;
+background-color: #FFE6E6;
+
 }
+
+
 
 /* -------------------------NAVBAR------------------------- */
 .navbar{
@@ -74,6 +78,8 @@
 
 /*---------------------- DESTACADOS------------------------------------------*/
 
+
+
 .destacados{
   display: inline-block;
   padding: 10px;
@@ -88,16 +94,36 @@
 .etiquetasDetalle{
   display: flex;
   justify-content: space-between;
-  align-content: flex-start;
-  padding: 10px;
+  align-content: space-between;
+  flex-grow: 4;
+  padding: 20px;
+}
+
+.miniDescripcion{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 20px;
+}
+
+
+.reserva{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: green;
 }
 
 
 
 
+/*---------------------- CATALOGO------------------------------------------*/
 
-
-
+.catalogo{
+  
+  display: inline-block;
+  padding: 10px;
+}
 
 
 

@@ -29,7 +29,7 @@
     {
         "id": 3,
         "name":" Descubre la Barcelona Modernista de noche",
-        "img":"https://cdn.pixabay.com/photo/2016/01/09/20/44/casa-battlo-1130953__480.jpg",
+        "img":"https://cdn.pixabay.com/photo/2014/11/19/01/09/arena-536859_960_720.jpg",
         "descripcion":"Desplazarse a pie es una de las mejores formas de descubrir las maravillas modernistas que se esconden en el barcelonés distrito del Eixample, ubicado en el centro de la ciudad. En esta excursión de cuatro horas, descubriremos los principales emblemas del modernismo y visitaremos los templos y edificios más célebres del arquitecto Gaudí. El tour incluye visita guiada al interior de la Casa Batlló y la Sagrada Familia, así como parada para cenar en el restaurante típico catalán Can Masiá, donde disfrutaremos de las mejores carnes de la región acompañadas de vinos de las tierras del Baix Empordá. El restaurante también ofrece opciones vegetarianas y veganas así como menú para niños. Cava aparte.",
         "precio": "200€ por persona",
         "duración": "4h",
@@ -65,7 +65,7 @@
     {
         "id": 6,
         "name":" Barcelona urbana en bicicleta",
-        "img":"https://images.unsplash.com/photo-1558981105-dc419adc32b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fGdpcmxzJTIwYmlrZSUyMGNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        "img":"https://images.unsplash.com/photo-1566376799975-ad0a084926fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmlrZSUyMGJhcmNlbG9uYXxlbnwwfHwwfHw%3D&w=1000&q=80",
         "descripcion":"Descubre las maravillas modernistas de la ciudad de Barcelona en un fantástico tour en bicicleta acompañado por un rider experto. Transita el bullicioso Paseo de Gracia, con sus icónicos edificios guadianos, relájate en el fantástico Paseo Marítimo de la Barceloneta y disfruta de la ciudad de una manera eco-friendly y cero residuos. El tour finaliza en la emblemática cantina “Can Culleretes”, fundada en 1786, donde disfrutaremos de un auténtico “soparet catalá” con los manjares típicos de la región acompañados de un vino del Alto Penedés.",
         "precio":"150€ por persona",
         "duración ": "3h",
