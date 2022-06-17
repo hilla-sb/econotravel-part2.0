@@ -63,7 +63,13 @@
 
 /*-------------------------- DESTACADOS & TITULO -------------------------*/
 
+.encabezadoDestacados{
+  text-decoration: none;
+  text-decoration-color: green;
+  display: flex;
+  justify-content: center;
 
+}
 
 
 

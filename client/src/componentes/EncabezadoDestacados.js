@@ -6,9 +6,8 @@ function EncabezadoDestacados() {
   return (
     <div>
         <Link to="/catalogo">
-          <h1>Experiencias en el área de Barcelona</h1>
+          <h1 className='encabezadoDestacados'>Experiencias en el área de Barcelona</h1>
         </Link>
-        
     </div>
   )
 }
