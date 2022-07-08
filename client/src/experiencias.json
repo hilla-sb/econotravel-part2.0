@@ -7,9 +7,9 @@
         "precio": "250€ por persona",
         "duración": "5h",
         "accesibilidad": "Actividad disponible para todas las edades. Disponemos de bicicletas accesibles para personas con movilidad reducida en el tren inferior así como sillines con capacidad para niños menores de 5 años (peso máximo 20kg). ",
-        "eti1":"Montaña",
-        "eti2":"Bicicleta",
-        "eti3":"Excursión larga"
+        "ubicacion":"Montaña",
+        "transporte":"Bicicleta",
+        "tiempo":"Excursión larga"
         
 
     },
