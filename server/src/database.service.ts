@@ -1,5 +1,8 @@
+
+
 import { config } from './config'
 import { Client } from 'pg'
+
 const url: any = config();
 export const connection = (queryStr:string, values:string[]=[]) =>{
     try{
@@ -10,9 +13,6 @@ export const connection = (queryStr:string, values:string[]=[]) =>{
         console.log(error)
     }
 }
-
-
-
 
 
 

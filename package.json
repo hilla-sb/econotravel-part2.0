@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/madag7/econotravel/issues"
   },
-  "homepage": "https://github.com/madag7/econotravel#readme"
+  "homepage": "https://github.com/madag7/econotravel#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
