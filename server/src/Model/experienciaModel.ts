@@ -12,3 +12,5 @@ class Experiencia {
         return result.rows;
     }
 }
+
+export default new Experiencia();
