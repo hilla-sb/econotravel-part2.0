@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import experienciaController from '../Controller/experienciaController';
+import experienciaController from '../controller/experienciaController';
 
 const experienciaRouter = Router();
 

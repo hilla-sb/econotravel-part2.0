@@ -1,16 +1,25 @@
-import { connection } from "../database.service";
+import { connection } from "../services/database.service";
+import { Client } from 'pg';
 
 class Experiencia {
+    client: Client;
+    constructor(client:any) {
+      this.client = client
+    }
     async getExperiencias(){
         const queryStr= 'SELECT * FROM experiencia'
-        const result:any = await connection(queryStr)
-        return result.rows;
+        await this.client.connect()
+        const resultado = await this.client.query(queryStr);
+        await this.client.end()
+        return resultado.rows;
     }
     async getUnaExperiencia(id:any){
         const queryStr='SELECT * FROM experiencia WHERE id=$1'
-        const result:any = await connection(queryStr, [id])
-        return result.rows;
+        await this.client.connect()
+        const resultado = await this.client.query(queryStr,[id]);
+        await this.client.end()
+        return resultado.rows;
     }
 }
 
-export default new Experiencia();
+export default new Experiencia(connection());

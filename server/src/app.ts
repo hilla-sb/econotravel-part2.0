@@ -1,5 +1,5 @@
 import express, {Request, Response} from 'express';
-import experienciaRoute from '../server/src/route/experienciaRoute';
+import experienciaRoute from './route/experienciaRoute';
 
 const app = express(); 
 app.use(express.json());
@@ -11,5 +11,5 @@ app.get('/',(req:Request, res:Response)=>{
 })
 const PORT = process.env.PORT||3001;
 app.listen(PORT,()=>{
-    console.log();
+    console.log("running on 3000");
 });
