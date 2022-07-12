@@ -1,5 +1,5 @@
 import express, {Request, Response} from 'express';
-import experienciaRoute from '../server/src/Route/experienciaRoute';
+import experienciaRoute from '../server/src/route/experienciaRoute';
 
 const app = express(); 
 app.use(express.json());
