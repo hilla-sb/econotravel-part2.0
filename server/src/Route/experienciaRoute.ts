@@ -1,9 +1,9 @@
 import {Router} from 'express';
 import experienciaController from '../Controller/experienciaController';
 
-const router = Router();
+const experienciaRouter = Router();
 
-router.get('/experiencias', experienciaController.getExperiencias);
-router.get('/experiencias/id',experienciaController.getUnaExperiencia);
+experienciaRouter.get('/experiencias', experienciaController.getExperiencias);
+experienciaRouter.get('/experiencias/id',experienciaController.getUnaExperiencia);
 
-export default router;
+export default experienciaRouter;
