@@ -17,6 +17,3 @@ export const connection = () =>{
         console.log(error)
     }
 }
-
-
-
