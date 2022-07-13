@@ -1,6 +1,6 @@
 import Router from 'express';
 import loginController from '../controller/loginController';
-import auth from '../middleware.ts/auth';
+import auth from '../middleware.ts/authHandler';
 const router = Router();
 
 router.post('/login', auth.validateUser, loginController);
