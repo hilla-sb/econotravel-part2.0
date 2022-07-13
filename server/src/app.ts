@@ -8,10 +8,10 @@ app.use(experienciaRoute);
 app.use(usuarioRoute);
 
 app.get('/',(req:Request, res:Response)=>{
-    res.json('hello Word');
+    res.json('hello World');
 
 })
 const PORT = process.env.PORT||3001;
 app.listen(PORT,()=>{
-    console.log("running on 3000");
+    console.log("Running on 3001");
 });
