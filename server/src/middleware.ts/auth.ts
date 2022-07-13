@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt';
 import { Request, Response, NextFunction } from 'express';
 import usuarioModel from '../model/usuarioModel';
 
+
 //Encriptamos la contraseña.
 const encryptPassword = async (req: Request, res: Response, next: NextFunction) => {
     try {
