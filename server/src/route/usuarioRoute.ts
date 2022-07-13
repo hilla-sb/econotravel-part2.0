@@ -2,9 +2,6 @@ import {Router} from 'express';
 import usuarioController from '../controller/usuarioController';
 import authHandler from '../middleware.ts/authHandler';
 import { validateToken } from '../middleware.ts/jwtHandler';
-import {saveUsuario} from '../model/usuarioModel';
-
-
 
 
 const router = Router();
