@@ -5,8 +5,8 @@ import { validateToken } from '../middleware.ts/jwtHandler';
 
 
 const router = Router();
-router.post('/usuario/login', authHandler.validateUser , usuarioController.login)
-router.post('/usuarios',authHandler.encryptPassword,usuarioController.saveUsuario)
+router.post('/usuario/login', authHandler.validateUser , usuarioController)
+router.post('/usuarios',authHandler.encryptPassword,usuarioController)
 router.get('/usuarios',validateToken,usuarioController);
 
 export default router;

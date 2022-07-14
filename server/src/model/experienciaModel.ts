@@ -13,10 +13,10 @@ class Experiencia {
         await this.client.end()
         return resultado.rows;
     }
-    async getUnaExperiencia(id:any){
+    async getUnaExperiencia(id_experiencia:any){
         const queryStr='SELECT * FROM experiencia WHERE id=$1'
         await this.client.connect()
-        const resultado = await this.client.query(queryStr,[id]);
+        const resultado = await this.client.query(queryStr,[id_experiencia]);
         await this.client.end()
         return resultado.rows;
     }
