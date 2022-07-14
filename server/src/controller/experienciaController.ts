@@ -1,7 +1,7 @@
 import { Response, Request } from "express";
 import experienciaModel from "../model/experienciaModel";
 
-const experienciaController = {
+const experienciaController  = {
 
   getExperiencias: async (req: Request, res: Response) => {
     const experiencias:any = await experienciaModel.getExperiencias();
