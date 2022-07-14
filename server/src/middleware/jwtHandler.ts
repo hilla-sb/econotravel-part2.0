@@ -1,8 +1,8 @@
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response, NextFunction} from 'express';
 import jwt from 'jsonwebtoken';
 import { config } from '../services/config';
 
-const getTokenFrom = request => {
+const getTokenFrom = (request: Request) => {
     const authorization = request.get('authorization');
 
     if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
@@ -14,7 +14,7 @@ const getTokenFrom = request => {
 }
 
 
-const tokenVerify = token => jwt.verify(token, config().secret);
+const tokenVerify = (token:any) => jwt.verify(token, config().secret);
 
 export const validateToken = (req:Request, res:Response, next:NextFunction) => {
 try {
@@ -31,7 +31,7 @@ try {
 
             next();
     }
-} catch (error) {
+} catch (error:any) {
     res.status(400).send(error.message)
 }
 

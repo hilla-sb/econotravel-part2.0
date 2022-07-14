@@ -1,7 +1,7 @@
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import { Request, Response, NextFunction } from 'express';
 import usuarioModel from '../model/usuarioModel';
-import {jwt, jwtPayload} from 'jsonwebtoken';
+import jwt, {JwtPayload} from 'jsonwebtoken';
 import { config } from '../services/config';
 
 
@@ -22,7 +22,7 @@ const encryptPassword = async (req: Request, res: Response, next: NextFunction) 
 }
 
 //Validamos el usuario
-const validateUser = async (res, req, next) => {
+const validateUser = async (res:Response, req:Request, next:NextFunction) => {
     try {
         const { email, password } = req.body;
 
@@ -36,12 +36,12 @@ const validateUser = async (res, req, next) => {
         } else {
             throw new Error('password not valid');
         }
-    } catch (error) {
+    } catch (error:any) {
         res.status(400).send(error.message);
     }
 }
 
-const generateToken = (payload:jwtPayload)=>{
+const generateToken = (payload:JwtPayload)=>{
     return jwt.sign(payload,config().secret)
 }
 
