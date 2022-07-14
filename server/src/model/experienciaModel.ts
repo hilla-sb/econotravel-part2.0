@@ -13,9 +13,15 @@ class Experiencia {
         await this.client.end()
         return resultado.rows;
     }
-    async getUnaExperiencia(id_experiencia:any){
+    async getUnaExperiencia(id_experiencia:number){
         const queryStr='SELECT * FROM experiencia WHERE id=$1'
         await this.client.connect()
+        const resultado = await this.client.query(queryStr,[id_experiencia]);
+        await this.client.end()
+        return resultado.rows;
+    }
+    async deleteExperiencia (id_experiencia:number){
+        const queryStr='DELETE FROM experiencia WHERE id_experiencia = $1 returning *'
         const resultado = await this.client.query(queryStr,[id_experiencia]);
         await this.client.end()
         return resultado.rows;
