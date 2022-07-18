@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-   "moduleResolution": "NodeNext"
-  }
-}
+    "rootDir": "./src",
+     "outDir": "build",
+     "strict": true,
+     "esModuleInterop":true,
+  },
+  "exclude":[
+    "./__*/**/*.ts"
+  ]
+ }

@@ -1,12 +1,12 @@
 import { Client } from 'pg'
 import { config } from './config'
 
-const url: any = config();
+const url = config();
 
 
 export const connection = () =>{
     try{
-        const client = new Client (url);
+        const client = new Client ({connectionString:url, ssl: {rejectUnauthorized: false}});
         /* await client.connect();    */
         console.log('Connected successfully to server');
         if (client!=undefined) 
