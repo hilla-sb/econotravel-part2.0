@@ -2,6 +2,7 @@ import express, {Request, Response} from 'express';
 import experienciaRoute from './route/experienciaRoute';
 import usuarioRoute from './route/usuarioRoute';
 import loginRoute from './route/loginRoute';
+import deleteController from './controller/deleteController';
 
 const app = express(); 
 app.use(express.json());
