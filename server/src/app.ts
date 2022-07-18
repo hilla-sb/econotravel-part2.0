@@ -3,6 +3,7 @@ import experienciaRoute from './route/experienciaRoute';
 import usuarioRoute from './route/usuarioRoute';
 import loginRoute from './route/loginRoute';
 import reservaRoute from './route/reservaRoute';
+import deleteController from './controller/deleteController';
 
 const app = express(); 
 app.use(express.json());
