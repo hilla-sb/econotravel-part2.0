@@ -7,4 +7,6 @@ reservaRouter.get('/reservas', reservaController.getReservas);
 
 reservaRouter.get('/reservas/:id',reservaController.getUnaReserva);
 
+reservaRouter.post('/reservas/:id',reservaController.addReserva);
+
 export default reservaRouter;
