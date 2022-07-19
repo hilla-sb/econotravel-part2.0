@@ -20,6 +20,10 @@ class Reserva {
         await this.client.end()
         return resultado.rows [0];
     }
+    //añadir
+    //editar
+    
+    //eliminar
     async deleteReserva (id_reserva:number){
         const queryStr='DELETE FROM reserva WHERE id_reserva = $1 returning *'
         await this.client.connect()

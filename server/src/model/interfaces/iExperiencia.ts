@@ -1,5 +1,5 @@
 export default interface iExperiencia{
-  id: number;
+  id_experiencia: number;
   nombre: string;
   img: string;
   descripcion: string;
