@@ -14,7 +14,7 @@ class Reserva {
         return resultado.rows [0];
     }
     async getUnaReserva(id_reserva:number){
-        const queryStr='SELECT * FROM reserva WHERE id=$1'
+        const queryStr='SELECT * FROM reserva WHERE id_reserva=$1'
         await this.client.connect()
         const resultado = await this.client.query(queryStr,[id_reserva]);
         await this.client.end()
@@ -26,7 +26,7 @@ class Reserva {
         await this.client.connect()
         const resultado = await this.client.query(queryStr,[]);
         await this.client.end()
-        return resultado.rows;
+        return resultado.rows[0];
     }
     //editar
     /* async editReserva(id_reserva:number){

@@ -68,7 +68,7 @@ var Reserva = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        queryStr = 'SELECT * FROM reserva WHERE id=$1';
+                        queryStr = 'SELECT * FROM reserva WHERE id_reserva=$1';
                         return [4 /*yield*/, this.client.connect()];
                     case 1:
                         _a.sent();
@@ -100,7 +100,11 @@ var Reserva = /** @class */ (function () {
                         return [4 /*yield*/, this.client.end()];
                     case 3:
                         _a.sent();
+<<<<<<< HEAD
                         return [2 /*return*/, resultado.rows];
+=======
+                        return [2 /*return*/, resultado.rows[0]];
+>>>>>>> 940d422555660b8f43e9d74ec592cb0ae10f36c7
                 }
             });
         });
