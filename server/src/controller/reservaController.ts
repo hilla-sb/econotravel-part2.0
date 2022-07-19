@@ -13,6 +13,12 @@ const reservaController  = {
     const reservas: any = await reservaModel.getUnaReserva(param);
     res.json(reservas);
   },
+  
+  addReserva: async (req: Request, res: Response) => {
+    const param: any = req.params["id_reserva"];
+    const reservas: any = await reservaModel.addReserva(param);
+    res.json(reservas);
+  },
 };
 
 export default reservaController;
