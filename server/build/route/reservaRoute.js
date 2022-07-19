@@ -8,4 +8,5 @@ var reservaController_1 = __importDefault(require("../controller/reservaControll
 var reservaRouter = (0, express_1.Router)();
 reservaRouter.get('/reservas', reservaController_1["default"].getReservas);
 reservaRouter.get('/reservas/:id', reservaController_1["default"].getUnaReserva);
+reservaRouter.post('/reservas/insert', reservaController_1["default"].addReserva);
 exports["default"] = reservaRouter;
