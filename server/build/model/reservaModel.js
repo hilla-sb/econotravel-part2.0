@@ -83,6 +83,9 @@ var Reserva = /** @class */ (function () {
             });
         });
     };
+    //añadir
+    //editar
+    //eliminar
     Reserva.prototype.deleteReserva = function (id_reserva) {
         return __awaiter(this, void 0, void 0, function () {
             var queryStr, resultado;
