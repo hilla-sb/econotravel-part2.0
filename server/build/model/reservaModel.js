@@ -37,17 +37,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var database_service_1 = require("../services/database.service");
-var Experiencia = /** @class */ (function () {
-    function Experiencia(client) {
+var Reserva = /** @class */ (function () {
+    function Reserva(client) {
         this.client = client;
     }
-    Experiencia.prototype.getExperiencias = function () {
+    Reserva.prototype.getReservas = function () {
         return __awaiter(this, void 0, void 0, function () {
             var queryStr, resultado;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        queryStr = 'SELECT * FROM experiencia';
+                        queryStr = 'SELECT * FROM reserva';
                         return [4 /*yield*/, this.client.connect()];
                     case 1:
                         _a.sent();
@@ -62,40 +62,35 @@ var Experiencia = /** @class */ (function () {
             });
         });
     };
-    Experiencia.prototype.getUnaExperiencia = function (id_experiencia) {
+    Reserva.prototype.getUnaReserva = function (id_reserva) {
         return __awaiter(this, void 0, void 0, function () {
-            var queryStr, resultado, clientecerrado;
+            var queryStr, resultado;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        queryStr = 'SELECT * FROM experiencia WHERE id_experiencia=$1';
-                        console.log('conectando');
+                        queryStr = 'SELECT * FROM reserva WHERE id=$1';
                         return [4 /*yield*/, this.client.connect()];
                     case 1:
                         _a.sent();
-                        console.log('esperando la query');
-                        return [4 /*yield*/, this.client.query(queryStr, [id_experiencia])];
+                        return [4 /*yield*/, this.client.query(queryStr, [id_reserva])];
                     case 2:
                         resultado = _a.sent();
-                        console.log('cerrando el cliente');
                         return [4 /*yield*/, this.client.end()];
                     case 3:
-                        clientecerrado = _a.sent();
-                        console.log('cliente cerrado' + clientecerrado);
-                        console.log('conexion cerrada');
+                        _a.sent();
                         return [2 /*return*/, resultado.rows];
                 }
             });
         });
     };
-    Experiencia.prototype.deleteExperiencia = function (id_experiencia) {
+    Reserva.prototype.deleteReserva = function (id_reserva) {
         return __awaiter(this, void 0, void 0, function () {
             var queryStr, resultado;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        queryStr = 'DELETE FROM experiencia WHERE id_experiencia = $1 returning *';
-                        return [4 /*yield*/, this.client.query(queryStr, [id_experiencia])];
+                        queryStr = 'DELETE FROM reserva WHERE id_reserva = $1 returning *';
+                        return [4 /*yield*/, this.client.query(queryStr, [id_reserva])];
                     case 1:
                         resultado = _a.sent();
                         return [4 /*yield*/, this.client.end()];
@@ -106,24 +101,6 @@ var Experiencia = /** @class */ (function () {
             });
         });
     };
-    Experiencia.prototype.editExperiencia = function (id_experiencia) {
-        return __awaiter(this, void 0, void 0, function () {
-            var queryStr, resultado;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        queryStr = 'UPDATE experiencias SET';
-                        return [4 /*yield*/, this.client.query(queryStr, [id_experiencia])];
-                    case 1:
-                        resultado = _a.sent();
-                        return [4 /*yield*/, this.client.end()];
-                    case 2:
-                        _a.sent();
-                        return [2 /*return*/, resultado.rows];
-                }
-            });
-        });
-    };
-    return Experiencia;
+    return Reserva;
 }());
-exports["default"] = new Experiencia((0, database_service_1.connection)());
+exports["default"] = new Reserva((0, database_service_1.connection)());

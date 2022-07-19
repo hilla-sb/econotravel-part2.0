@@ -7,11 +7,13 @@ var express_1 = __importDefault(require("express"));
 var experienciaRoute_1 = __importDefault(require("./route/experienciaRoute"));
 var usuarioRoute_1 = __importDefault(require("./route/usuarioRoute"));
 var loginRoute_1 = __importDefault(require("./route/loginRoute"));
+var reservaRoute_1 = __importDefault(require("./route/reservaRoute"));
 var app = (0, express_1["default"])();
 app.use(express_1["default"].json());
 app.use(experienciaRoute_1["default"]);
 app.use(usuarioRoute_1["default"]);
 app.use(loginRoute_1["default"]);
+app.use(reservaRoute_1["default"]);
 app.get('/', function (req, res) {
     res.json('hello World');
 });
