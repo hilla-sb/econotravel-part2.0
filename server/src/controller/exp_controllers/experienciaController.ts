@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import experienciaModel from "../model/experienciaModel";
+import experienciaModel from "../../model/experienciaModel";
 
 const experienciaController  = {
 
@@ -9,8 +9,8 @@ const experienciaController  = {
   },
 
   getUnaExperiencia: async (req: Request, res: Response) => {
-    const param: any = req.params["id_experiencia"];
-    console.log('empezando')
+    const param: any = req.params['id'];
+    console.log(param)
     const experiencias: any = await experienciaModel.getUnaExperiencia(param);
     console.log('conectado')
     res.json(experiencias);

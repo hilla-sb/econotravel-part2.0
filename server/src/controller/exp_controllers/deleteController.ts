@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import experienciaModel from'../model/experienciaModel';
+import experienciaModel from'../../model/experienciaModel';
 
 
 const deleteController = async (req: Request, res: Response) => {
