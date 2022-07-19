@@ -1,4 +1,4 @@
-import { Client } from 'pg'
+import { Client, Pool } from 'pg'
 import { config } from './config'
 
 const url = config();

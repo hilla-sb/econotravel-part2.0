@@ -39,35 +39,33 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 exports.__esModule = true;
-var experienciaModel_1 = __importDefault(require("../model/experienciaModel"));
-var experienciaController = {
-    getExperiencias: function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-        var experiencias;
+var reservaModel_1 = __importDefault(require("../model/reservaModel"));
+var reservaController = {
+    getReservas: function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+        var reservas;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, experienciaModel_1["default"].getExperiencias()];
+                case 0: return [4 /*yield*/, reservaModel_1["default"].getReservas()];
                 case 1:
-                    experiencias = _a.sent();
-                    res.json(experiencias);
+                    reservas = _a.sent();
+                    res.json(reservas);
                     return [2 /*return*/];
             }
         });
     }); },
-    getUnaExperiencia: function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-        var param, experiencias;
+    getUnaReserva: function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+        var param, reservas;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    param = req.params["id_experiencia"];
-                    console.log('empezando');
-                    return [4 /*yield*/, experienciaModel_1["default"].getUnaExperiencia(param)];
+                    param = req.params["id_reserva"];
+                    return [4 /*yield*/, reservaModel_1["default"].getUnaReserva(param)];
                 case 1:
-                    experiencias = _a.sent();
-                    console.log('conectado');
-                    res.json(experiencias);
+                    reservas = _a.sent();
+                    res.json(reservas);
                     return [2 /*return*/];
             }
         });
     }); }
 };
-exports["default"] = experienciaController;
+exports["default"] = reservaController;

@@ -1,13 +1,13 @@
 import express, {Request, Response} from 'express';
-import experienciaRoute from './route/experienciaRoute';
+import route from './route/experienciaRoute';
 import usuarioRoute from './route/usuarioRoute';
 import loginRoute from './route/loginRoute';
 import reservaRoute from './route/reservaRoute';
-import deleteController from './controller/deleteController';
+
 
 const app = express(); 
 app.use(express.json());
-app.use(experienciaRoute);
+app.use(route);
 app.use(usuarioRoute);
 app.use(loginRoute);
 app.use(reservaRoute);
