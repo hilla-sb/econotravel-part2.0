@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
 
 export default function Catalogo() {
-  let listaCatalogo = catalogo
+  let listaCatalogo = catalogo //SUSTITUIR POR LA LLAMADA A LA API USEEFFECT
 
   return listaCatalogo.map((el, i) => (
     <div className="catalogo">

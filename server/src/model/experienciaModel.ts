@@ -23,16 +23,26 @@ class Experiencia {
         const clientecerrado = await this.client.end()
         console.log('cliente cerrado' + clientecerrado)
         console.log('conexion cerrada')
-        return resultado.rows;
+        return resultado.rows[0];
     }
-    async deleteExperiencia (id_experiencia:number){
-        const queryStr='DELETE FROM experiencia WHERE id_experiencia = $1 returning *'
+    // añadir experiencia
+    async addExperiencia (id_experiencia:number){
+        const queryStr='INSERT INTO experiencia (id_experiencia, nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)'
         const resultado = await this.client.query(queryStr,[id_experiencia]);
         await this.client.end()
-        return resultado.rows;
+        return resultado.rows[0];
     }
+    //editar experiencia
     async editExperiencia (id_experiencia:number){
         const queryStr='UPDATE experiencias SET'
+        const resultado = await this.client.query(queryStr,[id_experiencia]);
+        await this.client.end()
+        return resultado.rows[0];
+    }
+
+    //eliminar experiencia
+    async deleteExperiencia (id_experiencia:number){
+        const queryStr='DELETE FROM experiencia WHERE id_experiencia = $1 returning *'
         const resultado = await this.client.query(queryStr,[id_experiencia]);
         await this.client.end()
         return resultado.rows;
