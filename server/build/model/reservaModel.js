@@ -57,7 +57,7 @@ var Reserva = /** @class */ (function () {
                         return [4 /*yield*/, this.client.end()];
                     case 3:
                         _a.sent();
-                        return [2 /*return*/, resultado.rows];
+                        return [2 /*return*/, resultado.rows[0]];
                 }
             });
         });
@@ -68,7 +68,7 @@ var Reserva = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        queryStr = 'SELECT * FROM reserva WHERE id=$1';
+                        queryStr = 'SELECT * FROM reserva WHERE id_reserva=$1';
                         return [4 /*yield*/, this.client.connect()];
                     case 1:
                         _a.sent();
@@ -78,13 +78,41 @@ var Reserva = /** @class */ (function () {
                         return [4 /*yield*/, this.client.end()];
                     case 3:
                         _a.sent();
-                        return [2 /*return*/, resultado.rows];
+                        return [2 /*return*/, resultado.rows[0]];
                 }
             });
         });
     };
     //añadir
+    Reserva.prototype.addReserva = function (id_reserva) {
+        return __awaiter(this, void 0, void 0, function () {
+            var queryStr, resultado;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        queryStr = 'INSERT INTO reserva(id_reserva, nombre, apellidos, dirección, fecha_inicio, fecha_fin, cantidad, precio_total, experiencia_id) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)';
+                        return [4 /*yield*/, this.client.connect()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.client.query(queryStr, [])];
+                    case 2:
+                        resultado = _a.sent();
+                        return [4 /*yield*/, this.client.end()];
+                    case 3:
+                        _a.sent();
+                        return [2 /*return*/, resultado.rows[0]];
+                }
+            });
+        });
+    };
     //editar
+    /* async editReserva(id_reserva:number){
+        const queryStr='UPDATE reserva(id_reserva, nombre, apellidos, dirección, fecha_inicio, fecha_fin, cantidad, precio_total, experiencia_id) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)'
+        await this.client.connect()
+        const resultado = await this.client.query(queryStr,[]);
+        await this.client.end()
+        return resultado.rows;
+    } */
     //eliminar
     Reserva.prototype.deleteReserva = function (id_reserva) {
         return __awaiter(this, void 0, void 0, function () {
@@ -93,17 +121,21 @@ var Reserva = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         queryStr = 'DELETE FROM reserva WHERE id_reserva = $1 returning *';
-                        return [4 /*yield*/, this.client.query(queryStr, [id_reserva])];
+                        return [4 /*yield*/, this.client.connect()];
                     case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.client.query(queryStr, [id_reserva])];
+                    case 2:
                         resultado = _a.sent();
                         return [4 /*yield*/, this.client.end()];
-                    case 2:
+                    case 3:
                         _a.sent();
-                        return [2 /*return*/, resultado.rows];
+                        return [2 /*return*/, resultado.rows[0]];
                 }
             });
         });
     };
     return Reserva;
 }());
+//editar y otra de añadir
 exports["default"] = new Reserva((0, database_service_1.connection)());
