@@ -83,11 +83,58 @@ var Experiencia = /** @class */ (function () {
                         clientecerrado = _a.sent();
                         console.log('cliente cerrado' + clientecerrado);
                         console.log('conexion cerrada');
-                        return [2 /*return*/, resultado.rows];
+                        return [2 /*return*/, resultado.rows[0]];
                 }
             });
         });
     };
+    // añadir experiencia
+    Experiencia.prototype.addExperiencia = function (id_experiencia) {
+        return __awaiter(this, void 0, void 0, function () {
+            var queryStr, resultado;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        queryStr = 'INSERT INTO experiencia (nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *';
+                        console.log('intentando conectar');
+                        return [4 /*yield*/, this.client.connect()];
+                    case 1:
+                        _a.sent();
+                        console.log('conectado');
+                        console.log('esperando la query');
+                        return [4 /*yield*/, this.client.query(queryStr, [id_experiencia.id, id_experiencia.nombre, id_experiencia.img, id_experiencia.descripcion, id_experiencia.precio, id_experiencia.duracion, id_experiencia.accesibilidad, id_experiencia.ubicacion, id_experiencia.transporte, id_experiencia.tiempo])];
+                    case 2:
+                        resultado = _a.sent();
+                        console.log('query ok');
+                        return [4 /*yield*/, this.client.end()];
+                    case 3:
+                        _a.sent();
+                        console.log('conexion cerrada');
+                        return [2 /*return*/, resultado.rows[0]];
+                }
+            });
+        });
+    };
+    //editar experiencia
+    Experiencia.prototype.editExperiencia = function (id_experiencia) {
+        return __awaiter(this, void 0, void 0, function () {
+            var queryStr, resultado;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        queryStr = 'UPDATE experiencia (id_experiencia, nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo) SET ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) returning *';
+                        return [4 /*yield*/, this.client.query(queryStr, [id_experiencia])];
+                    case 1:
+                        resultado = _a.sent();
+                        return [4 /*yield*/, this.client.end()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/, resultado.rows[0]];
+                }
+            });
+        });
+    };
+    //eliminar experiencia
     Experiencia.prototype.deleteExperiencia = function (id_experiencia) {
         return __awaiter(this, void 0, void 0, function () {
             var queryStr, resultado;
@@ -101,25 +148,7 @@ var Experiencia = /** @class */ (function () {
                         return [4 /*yield*/, this.client.end()];
                     case 2:
                         _a.sent();
-                        return [2 /*return*/, resultado.rows];
-                }
-            });
-        });
-    };
-    Experiencia.prototype.editExperiencia = function (id_experiencia) {
-        return __awaiter(this, void 0, void 0, function () {
-            var queryStr, resultado;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        queryStr = 'UPDATE experiencias SET';
-                        return [4 /*yield*/, this.client.query(queryStr, [id_experiencia])];
-                    case 1:
-                        resultado = _a.sent();
-                        return [4 /*yield*/, this.client.end()];
-                    case 2:
-                        _a.sent();
-                        return [2 /*return*/, resultado.rows];
+                        return [2 /*return*/, resultado.rows[0]];
                 }
             });
         });
