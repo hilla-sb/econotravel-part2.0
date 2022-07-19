@@ -11,21 +11,31 @@ class Reserva {
         await this.client.connect()
         const resultado = await this.client.query(queryStr);
         await this.client.end()
-        return resultado.rows;
+        return resultado.rows [0];
     }
     async getUnaReserva(id_reserva:number){
         const queryStr='SELECT * FROM reserva WHERE id=$1'
         await this.client.connect()
         const resultado = await this.client.query(queryStr,[id_reserva]);
         await this.client.end()
-        return resultado.rows;
+        return resultado.rows [0];
     }
     async deleteReserva (id_reserva:number){
         const queryStr='DELETE FROM reserva WHERE id_reserva = $1 returning *'
+        await this.client.connect()
         const resultado = await this.client.query(queryStr,[id_reserva]);
         await this.client.end()
-        return resultado.rows;
+        return resultado.rows [0];
     }
+   
+    
+
 }
+
+
+
+
+
+//editar y otra de añadir
 
 export default new Reserva(connection());
