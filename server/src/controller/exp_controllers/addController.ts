@@ -5,8 +5,8 @@ import iExperiencia from "../../model/interfaces/iExperiencia";
 
 const addController = async (req: Request, res: Response) => {
     try {
-        const id = req.params.id
-        const result: iExperiencia = await experienciaModel.addExperiencia(parseInt(id));
+        const id:any = req.body
+        const result: iExperiencia = await experienciaModel.addExperiencia((id));
 
         res.status(200).json({ message: `Tu experiencia ${result.id_experiencia} ha sido añadida con éxito.` })
 
@@ -16,6 +16,5 @@ const addController = async (req: Request, res: Response) => {
         });
     };
 };
-
 
 export default addController;
