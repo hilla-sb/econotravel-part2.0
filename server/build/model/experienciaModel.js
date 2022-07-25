@@ -89,20 +89,20 @@ var Experiencia = /** @class */ (function () {
         });
     };
     // añadir experiencia
-    Experiencia.prototype.addExperiencia = function (id_experiencia) {
+    Experiencia.prototype.addExperiencia = function (id_exp) {
         return __awaiter(this, void 0, void 0, function () {
             var queryStr, resultado;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         queryStr = 'INSERT INTO experiencia (nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *';
-                        console.log('intentando conectar');
+                        console.log('intentando conectar', id_exp);
                         return [4 /*yield*/, this.client.connect()];
                     case 1:
                         _a.sent();
                         console.log('conectado');
                         console.log('esperando la query');
-                        return [4 /*yield*/, this.client.query(queryStr, [id_experiencia.id, id_experiencia.nombre, id_experiencia.img, id_experiencia.descripcion, id_experiencia.precio, id_experiencia.duracion, id_experiencia.accesibilidad, id_experiencia.ubicacion, id_experiencia.transporte, id_experiencia.tiempo])];
+                        return [4 /*yield*/, this.client.query(queryStr, [id_exp.nombre, id_exp.img, id_exp.descripcion, id_exp.precio, id_exp.duracion, id_exp.accesibilidad, id_exp.ubicacion, id_exp.transporte, id_exp.tiempo])];
                     case 2:
                         resultado = _a.sent();
                         console.log('query ok');

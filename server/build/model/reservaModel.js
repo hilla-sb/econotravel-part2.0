@@ -100,11 +100,7 @@ var Reserva = /** @class */ (function () {
                         return [4 /*yield*/, this.client.end()];
                     case 3:
                         _a.sent();
-<<<<<<< HEAD
-                        return [2 /*return*/, resultado.rows];
-=======
                         return [2 /*return*/, resultado.rows[0]];
->>>>>>> 940d422555660b8f43e9d74ec592cb0ae10f36c7
                 }
             });
         });

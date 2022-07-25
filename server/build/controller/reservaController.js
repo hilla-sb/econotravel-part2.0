@@ -82,20 +82,6 @@ var reservaController = {
                     return [2 /*return*/];
             }
         });
-    }); },
-    addReserva: function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-        var param, reservas;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    param = req.params["id_reserva"];
-                    return [4 /*yield*/, reservaModel_1["default"].addReserva(param)];
-                case 1:
-                    reservas = _a.sent();
-                    res.json(reservas);
-                    return [2 /*return*/];
-            }
-        });
     }); }
 };
 exports["default"] = reservaController;

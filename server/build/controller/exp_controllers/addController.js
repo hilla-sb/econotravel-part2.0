@@ -46,8 +46,8 @@ var addController = function (req, res) { return __awaiter(void 0, void 0, void 
         switch (_a.label) {
             case 0:
                 _a.trys.push([0, 2, , 3]);
-                id = req.params.id;
-                return [4 /*yield*/, experienciaModel_1["default"].addExperiencia(parseInt(id))];
+                id = req.body;
+                return [4 /*yield*/, experienciaModel_1["default"].addExperiencia((id))];
             case 1:
                 result = _a.sent();
                 res.status(200).json({ message: "Tu experiencia ".concat(result.id_experiencia, " ha sido a\u00F1adida con \u00E9xito.") });
