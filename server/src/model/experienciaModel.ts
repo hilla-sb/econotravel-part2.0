@@ -1,5 +1,5 @@
 import { connection } from "../services/database.service";
-import { Client, Pool } from 'pg';
+import { Client } from 'pg';
 import iExperiencia from "./interfaces/iExperiencia";
 
 class Experiencia {
@@ -16,14 +16,9 @@ class Experiencia {
     }
     async getUnaExperiencia(id_experiencia:any){
         const queryStr='SELECT * FROM experiencia WHERE id_experiencia=$1'
-        console.log('conectando')
         await this.client.connect()
-        console.log('esperando la query')
         const resultado = await this.client.query(queryStr,[id_experiencia]);
-        console.log('cerrando el cliente')
-        const clientecerrado = await this.client.end()
-        console.log('cliente cerrado' + clientecerrado)
-        console.log('conexion cerrada')
+        await this.client.end()
         return resultado.rows[0];
     }
     // añadir experiencia
@@ -34,16 +29,22 @@ class Experiencia {
         console.log('conectado')
         console.log('esperando la query')
         const resultado:any = await this.client.query(queryStr,[id_exp.nombre, id_exp.img, id_exp.descripcion,id_exp.precio, id_exp.duracion, id_exp.accesibilidad, id_exp.ubicacion, id_exp.transporte, id_exp.tiempo] as string[]);
-        console.log('query ok')
+        console.log('ha leido la query')
         await this.client.end()
-        console.log('conexion cerrada')
+        console.log('cerrando el cliente')
         return resultado.rows[0];
     }
     //editar experiencia
-    async editExperiencia (id_exp:number){
-        const queryStr='UPDATE experiencia (id_experiencia, nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo) SET ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) returning *'
+    async editExperiencia (id_exp:any){
+        const queryStr='UPDATE experiencia (nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo) SET ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *'
+        console.log('intentando conectar', id_exp)
+        await this.client.connect()
+        console.log('conectado')
+        console.log('esperando la query')
         const resultado = await this.client.query(queryStr,[id_exp]);
+        console.log('ha leido la query')
         await this.client.end()
+        console.log('cerrando el cliente')
         return resultado.rows[0];
     }
 
@@ -55,9 +56,9 @@ class Experiencia {
         console.log('conectado')
         console.log('esperando la query')
         const resultado:any = await this.client.query(queryStr,[id_exp]);
-        console.log('query ok')
+        console.log('ha leido la query')
         await this.client.end()
-        console.log('conexion cerrada')
+        console.log('cerrando el cliente')
         return resultado.rows[0];
     }
 }
