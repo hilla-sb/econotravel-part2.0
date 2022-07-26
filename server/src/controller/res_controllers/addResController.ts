@@ -5,6 +5,7 @@ import iReserva from "../../model/interfaces/iReserva";
 const addResController = async (req: Request, res: Response) => {
   try {
     const {
+      id_reserva,
       nombre,
       apellidos,
       direccion,
@@ -12,8 +13,7 @@ const addResController = async (req: Request, res: Response) => {
       fecha_fin,
       cantidad,
       precio_total,
-      experiencia_id,
-      ...reservas
+      experiencia_id
     }: iReserva = req.body;
 
     if (
@@ -30,6 +30,7 @@ const addResController = async (req: Request, res: Response) => {
     console.log("addResController - id OK");
 
     const resultado: iReserva = await reservaModel.addReserva({
+      id_reserva,
       nombre,
       apellidos,
       direccion,
@@ -37,8 +38,7 @@ const addResController = async (req: Request, res: Response) => {
       fecha_fin,
       cantidad,
       precio_total,
-      experiencia_id,
-      ...reservas,
+      experiencia_id
     });
 
     console.log("addResController - result OK");
@@ -46,9 +46,9 @@ const addResController = async (req: Request, res: Response) => {
     res
     .status(200)
     .json({
-      message: `La reserva ${resultado.id_reserva} ha sido añadida con éxito.`,
+      message: `La reserva ${resultado.id_reserva} ha sido añadida con éxito.`
     });
-    console.log("añadida nueva reserva");
+    //console.log("añadida nueva reserva");
   } catch (err: any) {
     res
     .status(400)
