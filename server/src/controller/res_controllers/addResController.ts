@@ -43,9 +43,23 @@ const addResController = async (req: Request, res: Response) => {
 
     console.log("addResController - result OK");
 
-    res
-      .status(200)
-      .json({message:`La reserva ${resultado.id_reserva} ha sido añadida con éxito.`});
+    res.status(200).json({
+      message: `La reserva ${resultado.id_reserva} ha sido añadida con éxito.`,
+    });
+  } catch (err: any) {
+    res.status(400).json({
+      error: err,
+    });
+  }
+};
+    
+    export default addResController;
+    
+    /* res
+    .status(200)
+    .json({
+      message: `La reserva ${resultado.id_reserva} ha sido añadida con éxito.`
+    });
     //console.log("añadida nueva reserva");
   } catch (err: any) {
     res
@@ -54,6 +68,4 @@ const addResController = async (req: Request, res: Response) => {
         error: err,
       });
   }
-};
-
-export default addResController;
+}; */
