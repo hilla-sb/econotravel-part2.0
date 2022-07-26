@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import bcryptjs from 'bcryptjs';
 import { Request, Response, NextFunction } from 'express';
 import usuarioModel from '../model/usuarioModel';
 import jwt, {JwtPayload} from 'jsonwebtoken';
@@ -12,7 +12,7 @@ const encryptPassword = async (req: Request, res: Response, next: NextFunction) 
             res.send('password missing');
         } else {
             const saltRounds = 10;
-            const passwordHash = await bcrypt.hash(req.body.password, saltRounds);
+            const passwordHash = await bcryptjs.hash(req.body.password, saltRounds);
             req.body.password = passwordHash;
             next();
         }
@@ -30,7 +30,7 @@ const validateUser = async (res:Response, req:Request, next:NextFunction) => {
             throw new Error('email or password not exist');
         }
         const result = await usuarioModel.getUsuario({ email, password });
-        const comparePassword = await bcrypt.compare(req.body.password, result.password);
+        const comparePassword = await bcryptjs.compare(req.body.password, result.password);
         if (comparePassword) {
             next();
         } else {

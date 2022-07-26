@@ -1,7 +1,7 @@
 export default interface iReserva{
     id_reserva:number;
     nombre:string;
-    direccion?:string;
+    direccion:string;
     apellidos:string;
     fecha_inicio:number;
     fecha_fin:number;
