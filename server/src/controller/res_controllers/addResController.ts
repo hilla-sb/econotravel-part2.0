@@ -44,17 +44,15 @@ const addResController = async (req: Request, res: Response) => {
     console.log("addResController - result OK");
 
     res
-    .status(200)
-    .json({
-      message: `La reserva ${resultado.id_reserva} ha sido añadida con éxito.`
-    });
+      .status(200)
+      .json({message:`La reserva ${resultado.id_reserva} ha sido añadida con éxito.`});
     //console.log("añadida nueva reserva");
   } catch (err: any) {
     res
-    .status(400)
-    .json({
-      error: err,
-    });
+      .status(400)
+      .json({
+        error: err,
+      });
   }
 };
 
