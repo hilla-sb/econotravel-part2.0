@@ -14,10 +14,10 @@ class Experiencia {
         await this.client.end()
         return resultado.rows;
     }
-    async getUnaExperiencia(id_experiencia:any){
+    async getUnaExperiencia(id_exp:any){
         const queryStr='SELECT * FROM experiencia WHERE id_experiencia=$1'
         await this.client.connect()
-        const resultado = await this.client.query(queryStr,[id_experiencia]);
+        const resultado = await this.client.query(queryStr,[id_exp]);
         await this.client.end()
         return resultado.rows[0];
     }
@@ -35,14 +35,13 @@ class Experiencia {
         return resultado.rows[0];
     }
     //editar experiencia
-    async editExperiencia (id_exp:any){
-        const queryStr='UPDATE experiencia (nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo) SET ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *'
-        console.log('intentando conectar', id_exp)
+    async editExperiencia (body:iExperiencia, id_exp:number){
+        const queryStr='UPDATE experiencia SET nombre= $2, img = $3, descripcion = $4, precio = $5, duracion = $6 accesibilidad = $7, ubicacion = $8, transporte = $9, tiempo = $10, WHERE id_experiencia = $1 returning *'
         await this.client.connect()
-        console.log('conectado')
+        console.log('conectado al servidor')
         console.log('esperando la query')
-        const resultado = await this.client.query(queryStr,[id_exp]);
-        console.log('ha leido la query')
+        const resultado = await this.client.query(queryStr,[id_exp, body]);
+        console.log('ha leido la query', queryStr,[id_exp, body] )
         await this.client.end()
         console.log('cerrando el cliente')
         return resultado.rows[0];
