@@ -1,18 +1,17 @@
 import { Response, Request } from "express";
 import experienciaModel from "../../model/experienciaModel";
 
-const experienciaController  = {
-
+const experienciaController = {
   getExperiencias: async (req: Request, res: Response) => {
-    const experiencias:any = await experienciaModel.getExperiencias();
+    const experiencias: any = await experienciaModel.getExperiencias();
     res.json(experiencias);
   },
 
   getUnaExperiencia: async (req: Request, res: Response) => {
-    const param: any = req.params['id'];
-    console.log(param)
+    const param: any = req.params["id"];
+    console.log(param);
     const experiencias: any = await experienciaModel.getUnaExperiencia(param);
-    console.log('conectado')
+    console.log("conectado");
     res.json(experiencias);
   },
 };
