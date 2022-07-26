@@ -5,10 +5,14 @@ import iExperiencia from "../../model/interfaces/iExperiencia";
 
 const addController = async (req: Request, res: Response) => {
     try {
-        const id: any = req.body
-        const result: iExperiencia = await experienciaModel.addExperiencia(id);
+        const {nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo, ...experiencias}:iExperiencia = req.body
 
-        res.status(200).json({ message: `La experiencia ${result.id_experiencia} ha sido añadida con éxito.` })
+        if (!nombre|| !img|| !descripcion|| !precio|| !duracion|| !accesibilidad|| !ubicacion|| !transporte|| !tiempo)
+            res.status(400).json({message:'Por favor, rellena todos los campos.'});
+
+        const resultado: iExperiencia = await experienciaModel.addExperiencia({nombre, img, descripcion, precio, duracion, accesibilidad, ubicacion, transporte, tiempo, ...experiencias});
+
+        res.status(200).json({ message: `La experiencia ${resultado.id_experiencia} ha sido añadida con éxito.` })
 
     } catch (err: any) {
         res.status(400).json({
