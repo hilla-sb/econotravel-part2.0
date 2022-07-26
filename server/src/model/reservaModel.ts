@@ -35,13 +35,13 @@ class Reserva {
         return resultado.rows[0];
     }
     //editar
-    /* async editReserva(id_reserva:number){
+     async editReserva(id_reserva:number){
         const queryStr='UPDATE reserva(id_reserva, nombre, apellidos, dirección, fecha_inicio, fecha_fin, cantidad, precio_total, experiencia_id) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)'
         await this.client.connect()
         const resultado = await this.client.query(queryStr,[]);
         await this.client.end()
         return resultado.rows;
-    } */
+    } 
     //eliminar
     async deleteReserva (id_reserva:any){
         const queryStr='DELETE FROM reserva WHERE id_reserva = $1 returning *'
