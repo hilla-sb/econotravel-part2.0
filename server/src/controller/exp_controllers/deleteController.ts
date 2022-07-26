@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import experienciaModel from'../../model/experienciaModel';
+import experienciaModel from '../../model/experienciaModel';
 import iExperiencia from "../../model/interfaces/iExperiencia";
 
 
@@ -16,6 +16,5 @@ const deleteController = async (req: Request, res: Response) => {
         });
     };
 };
-
 
 export default deleteController;
