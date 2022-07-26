@@ -43,11 +43,9 @@ const addController = async (req: Request, res: Response) => {
       ...experiencias,
     });
 
-    res
-      .status(200)
-      .json({
-        message: `La experiencia ${resultado.id_experiencia} ha sido añadida con éxito.`,
-      });
+    res.status(200).json({
+      message: `La experiencia ${resultado.id_experiencia} ha sido añadida con éxito.`,
+    });
   } catch (err: any) {
     res.status(400).json({
       error: err,

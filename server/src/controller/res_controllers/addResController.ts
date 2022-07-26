@@ -25,7 +25,7 @@ const addResController = async (req: Request, res: Response) => {
       !cantidad ||
       !experiencia_id
     )
-      res.status(400).json({ message: "Por favor rellena todos los campos" });
+      res.status(400).json({ message: "Por favor, rellena todos los campos." });
 
     console.log("addResController - id OK");
 
@@ -44,13 +44,15 @@ const addResController = async (req: Request, res: Response) => {
     console.log("addResController - result OK");
 
     res
-      .status(200)
-      .json({
-        message: `La reserva ${resultado.id_reserva} ha sido añadida con éxito.`,
-      });
+    .status(200)
+    .json({
+      message: `La reserva ${resultado.id_reserva} ha sido añadida con éxito.`,
+    });
     console.log("añadida nueva reserva");
   } catch (err: any) {
-    res.status(400).json({
+    res
+    .status(400)
+    .json({
       error: err,
     });
   }
