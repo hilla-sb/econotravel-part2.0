@@ -1,5 +1,5 @@
 import { connection } from "../services/database.service";
-import { Client } from 'pg';
+import { Client } from "pg";
 import iReserva from "./interfaces/iReserva";
 
 class Reserva {
@@ -56,10 +56,6 @@ class Reserva {
         return resultado.rows [0];
     }
 }
-
-
-
-
 
 //editar y otra de añadir
 
