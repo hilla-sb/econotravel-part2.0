@@ -57,10 +57,10 @@ class Reserva {
     } 
     //eliminar
     async deleteReserva (id_reserva:any){
-        const queryStr=
+        const queryStr =
         'DELETE FROM reserva WHERE id_reserva = $1 returning *'
-        const resultado:any = await this.client.query(queryStr,[id_reserva]);
-        return resultado.rows [0];
+        const resultado: any = await this.client.query(queryStr,[id_reserva]);
+        return resultado.rows[0];
     }
 }
 

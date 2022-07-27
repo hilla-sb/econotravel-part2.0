@@ -5,7 +5,7 @@ import iReserva from "../../model/interfaces/iReserva";
 const deleteResController = async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    const result = await reservaModel.deleteReserva(parseInt(id));
+    const result:any = await reservaModel.deleteReserva(parseInt(id));
 
     res
       .status(200)
@@ -13,7 +13,9 @@ const deleteResController = async (req: Request, res: Response) => {
         message: `Tu reserva ${result.id_reserva} ha sido borrada con éxito.`,
       });
   } catch (err: any) {
-    res.status(400).json({ error: err });
+    res.status(400).json({ 
+      error: err,
+    });
   }
 };
 

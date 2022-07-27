@@ -19,6 +19,6 @@ reservaRouter.post("/reservas/insert", addResController);
 reservaRouter.put("/reservas/edit/:id", editResController);
 
 //eliminar reserva
-reservaRouter.delete("/reservas:id", deleteResController);
+reservaRouter.delete("/reservas/:id", deleteResController);
 
 export default reservaRouter;
