@@ -22,7 +22,7 @@ export default function HomeNav () {
               event.preventDefault();
               setSearchTerm(event.target.value);
             }} />
-            <img className="icono-lupa" src={lupa} alt="Icono lupa" onClick={()=> {navigate("/catalogo", { replace: true });}}/>          
+            <img className="icono-lupa" src={lupa} alt="Icono lupa" onClick={()=> {navigate("/experiencias", { replace: true });}}/>          
           </div>
           <div>
             { searchTerm!==null && data

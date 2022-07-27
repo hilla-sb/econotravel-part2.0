@@ -14,7 +14,5 @@ app.use(reservaRoute);
 app.get("/", (req: Request, res: Response) => {
   res.json("hello World");
 });
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log("Running on 3001");
-});
+
+export default app;
