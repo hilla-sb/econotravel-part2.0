@@ -1,9 +1,9 @@
 import { connection } from "../services/database.service";
-import { Client } from "pg";
+import { Pool } from "pg";
 import iReserva from "./interfaces/iReserva";
 
 class Reserva {
-    client: Client;
+    client: Pool;
     constructor(client:any) {
       this.client = client
     }

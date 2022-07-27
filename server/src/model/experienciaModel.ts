@@ -1,5 +1,5 @@
 import { connection } from "../services/database.service";
-import { Client, Pool } from "pg";
+import { Pool } from "pg";
 import iExperiencia from "./interfaces/iExperiencia";
 
 class Experiencia {
