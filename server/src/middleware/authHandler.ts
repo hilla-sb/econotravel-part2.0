@@ -3,9 +3,9 @@ import { Request, Response, NextFunction } from "express";
 import usuarioModel from "../model/usuarioModel";
 
 
-const hashPassword = (password:string) => {
-const saltRounds = 10;
-return bcryptjs.hash(password,saltRounds);
+const hashPassword = (password: string) => {
+  const saltRounds = 10;
+  return bcryptjs.hash(password, saltRounds);
 };
 
 //Encriptamos la contraseña.
@@ -21,7 +21,8 @@ const encryptPassword = async (
       const saltRounds = 10;
       const passwordHash = await bcryptjs.hash(req.body.password, saltRounds);
       req.body.password = passwordHash;
-      next();}
+      next();
+    }
   } catch (error) {
     res.status(500).send('internal error');
   }

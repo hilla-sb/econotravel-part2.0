@@ -1,11 +1,14 @@
 import { Router } from "express";
 import usuarioController from "../controller/usuarioController";
 import authHandler from "../middleware/authHandler";
-import { validateToken } from "../middleware/jwtHandler";
+import { jwtHandler } from "../middleware/jwtHandler";
 
 const router = Router();
-// router.post('/usuario/login', authHandler.validateUser, usuarioController)
-router.post("/usuarios", authHandler.encryptPassword, usuarioController);
-router.get("/usuarios", validateToken, usuarioController);
+
+router.post('/usuario/register', authHandler.encryptPassword, usuarioController.saveUsuario)
+
+router.post("/usuarios/login", authHandler.validateUser, usuarioController);
+
+router.get("/usuarios/all", jwtHandler. validateToken, usuarioController.getUsuario);
 
 export default router;
