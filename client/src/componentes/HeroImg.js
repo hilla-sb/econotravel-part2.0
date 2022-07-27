@@ -13,7 +13,7 @@ export default function Heroimg() {
       </div>
 
       <div className="descubremas">
-        <Button className="btn-heroimg" href="/catalogo">
+        <Button className="btn-heroimg" href="/experiencias">
           DESCUBRE MÁS
         </Button>{" "}
       </div>
