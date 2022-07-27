@@ -5,7 +5,7 @@ const url = config();
 
 export const connection = () => {
   try {
-    const client = new Client({
+    const client = new Pool({
       connectionString: url,
       ssl: { rejectUnauthorized: false },
     });

@@ -9,9 +9,9 @@ const usuarioController = async (req: Request, res: Response) => {
       .status(400)
       .json({ message: "Porfavor, rellene todos los campos obligatorios." });
   }
-  const result = await usuarioModel.saveUsuario({ email, password });
+  // const result = await usuarioModel.saveUsuario({ email, password });
 
-  res.json(result);
+  // res.json(result);
 };
 
 export default usuarioController;
