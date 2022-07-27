@@ -1,4 +1,4 @@
-import bookingForm from '../componentes/forms/BookingForm';
+/*import bookingForm from '../componentes/forms/BookingForm';
 
 function Reserva() {
   return (
@@ -10,3 +10,4 @@ function Reserva() {
 }
 
 export default Reserva;
+*/
