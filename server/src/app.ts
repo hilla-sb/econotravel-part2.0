@@ -12,7 +12,7 @@ app.use(usuarioRoute);
 app.use(reservaRoute);
 
 app.get("/", (req: Request, res: Response) => {
-  res.json("hello World");
+  res.json("Hey there! We're Econotravel.");
 });
 
 export default app;
