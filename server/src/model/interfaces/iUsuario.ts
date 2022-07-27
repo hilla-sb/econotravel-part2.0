@@ -4,5 +4,11 @@ export interface iUsuariologin{
 }
 
 export interface iUsuario extends iUsuariologin{
-  nombre? : string; 
+  nombre: string;
+  apellidos: string;
+  fecha_nacimiento: string;
+  direccion?: string;
+  cp?:string;
+  telefono?:number;
+  reserva_id:number; 
 }

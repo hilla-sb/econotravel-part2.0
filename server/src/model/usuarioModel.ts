@@ -8,6 +8,17 @@ class Usuario {
     this.client = client;
   }
 
+  async getUsuario (usuario: iUsuariologin) {
+    const queryStr = 'SELECT * FROM usuario WHERE email = $1';
+    const values = [usuario.email];
+    await this.client.connect();
+    console.log('conectado')
+    const resultado = await this.client.query(queryStr, values);
+    console.log('query ok')
+    // await this.client.end();
+    return resultado.rows[0];
+  }
+
   async saveUsuario(usuario: iUsuario) {
     try {
       const queryStr =
@@ -22,15 +33,6 @@ class Usuario {
       console.log(error);
     }
   }
-  async getUsuario(usuario: iUsuariologin) {
-    const queryStr = 'SELECT * FROM "usuario" WHERE email = $1';
-    const values = [usuario.email];
-    /* const cliente = await connection(); */
-    await this.client.connect();
-    const resultado = await this.client.query(queryStr, values);
-    await this.client.end();
-    return resultado.rows[0];
-  }
-}
 
+}
 export default new Usuario(connection());

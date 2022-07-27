@@ -1,8 +1,12 @@
 import bcryptjs from "bcryptjs";
 import { Request, Response, NextFunction } from "express";
 import usuarioModel from "../model/usuarioModel";
-import jwt, { JwtPayload } from "jsonwebtoken";
-import { config } from "../services/config";
+
+
+const hashPassword = (password:string) => {
+const saltRounds = 10;
+return bcryptjs.hash(password,saltRounds);
+};
 
 //Encriptamos la contraseña.
 const encryptPassword = async (
@@ -17,10 +21,9 @@ const encryptPassword = async (
       const saltRounds = 10;
       const passwordHash = await bcryptjs.hash(req.body.password, saltRounds);
       req.body.password = passwordHash;
-      next();
-    }
+      next();}
   } catch (error) {
-    res.status(500).send("internal error");
+    res.status(500).send('internal error');
   }
 };
 
@@ -34,7 +37,7 @@ const validateUser = async (
     const { email, password } = req.body;
 
     if (!email || !password) {
-      throw new Error("email or password not exist");
+      throw new Error("email or password does not exist");
     }
     const result = await usuarioModel.getUsuario({ email, password });
     const comparePassword = await bcryptjs.compare(
@@ -51,8 +54,6 @@ const validateUser = async (
   }
 };
 
-const generateToken = (payload: JwtPayload) => {
-  return jwt.sign(payload, config().secret);
-};
 
-export default { encryptPassword, validateUser, generateToken };
+
+export default { encryptPassword, validateUser, hashPassword };
