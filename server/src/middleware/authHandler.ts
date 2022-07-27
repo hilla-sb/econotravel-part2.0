@@ -55,6 +55,4 @@ const validateUser = async (
   }
 };
 
-
-
 export default { encryptPassword, validateUser, hashPassword };

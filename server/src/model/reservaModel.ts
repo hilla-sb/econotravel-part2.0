@@ -10,7 +10,7 @@ class Reserva {
     async getReservas(){
         const queryStr= 'SELECT * FROM reserva'
         const resultado = await this.client.query(queryStr);
-        return resultado.rows [0];
+        return resultado.rows;
     }
     async getUnaReserva(id_reserva:number){
         const queryStr='SELECT * FROM reserva WHERE id_reserva=$1'
