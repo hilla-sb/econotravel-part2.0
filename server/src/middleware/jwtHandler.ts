@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import jwt, {JwtPayload} from "jsonwebtoken";
+import jwt, { JwtPayload } from "jsonwebtoken";
 import { config, secret } from "../services/config";
-
 
 const generateToken = (payload: JwtPayload) => {
   return jwt.sign(payload, secret);
@@ -10,7 +9,7 @@ const generateToken = (payload: JwtPayload) => {
 const getTokenFrom = (request: Request) => {
   const authorization = request.get("authorization");
 
-  if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
+  if (authorization && authorization.toLowerCase().startsWith("bearer ")) {
     return authorization.substring(7);
   } else {
     return null;
@@ -19,13 +18,13 @@ const getTokenFrom = (request: Request) => {
 
 const tokenVerify = (token: any) => jwt.verify(token, config().secret);
 
-export const validateTokenRole = async (
+export const validateToken = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
   try {
-    const token:string | null = getTokenFrom(req);
+    const token: string | null = getTokenFrom(req);
     console.log(token);
 
     let email: any = tokenVerify(token);
@@ -40,21 +39,26 @@ export const validateTokenRole = async (
   }
 };
 
-const validateTokenLogin = (req: Request, res: Response, next: NextFunction) => {
+const validateTokenLogin = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   try {
-      const token: string | null = getTokenFrom(req);
-      let email: any = tokenVerify(token);
-      if (!token || !email) {
-          throw new Error ('token invalid or missing!');
-      }
-       else {
-          next()
-      }
-  } catch (error:any) {
-      res.status(400).send(error.message)
+    const token: string | null = getTokenFrom(req);
+    let email: any = tokenVerify(token);
+    if (!token || !email) {
+      throw new Error("token invalid or missing!");
+    } else {
+      next();
+    }
+  } catch (error: any) {
+    res.status(400).send(error.message);
   }
-}
+};
 
 export default {
-  generateToken, validateTokenRole, validateTokenLogin
-}
+  generateToken,
+  validateToken,
+  validateTokenLogin,
+};

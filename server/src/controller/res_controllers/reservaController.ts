@@ -1,5 +1,4 @@
 import { Response, Request } from "express";
-//import iReserva from "../../model/interfaces/iReserva";
 import reservaModel from "../../model/reservaModel";
 
 const reservaController = {
@@ -12,7 +11,6 @@ const reservaController = {
     const param: any = req.params["id"];
     console.log(param);
     const reservas: any = await reservaModel.getUnaReserva(param);
-    console.log("conectado");
     res.json(reservas);
   },
 };

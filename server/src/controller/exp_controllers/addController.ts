@@ -28,7 +28,7 @@ const addController = async (req: Request, res: Response) => {
       !transporte ||
       !tiempo
     )
-      res.status(400).json({ message: "Por favor, rellena todos los campos." });
+      res.status(400).json({ message: "Por favor, rellene todos los campos obligatorios." });
 
     const resultado: iExperiencia = await experienciaModel.addExperiencia({
       nombre,

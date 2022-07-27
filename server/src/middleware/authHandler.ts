@@ -1,7 +1,7 @@
 import bcryptjs from "bcryptjs";
 import { Request, Response, NextFunction } from "express";
+import { iUsuario, iUsuariologin } from "../model/interfaces/iUsuario";
 import usuarioModel from "../model/usuarioModel";
-
 
 const hashPassword = (password: string) => {
   const saltRounds = 10;
@@ -24,7 +24,7 @@ const encryptPassword = async (
       next();
     }
   } catch (error) {
-    res.status(500).send('internal error');
+    res.status(500).send("internal error");
   }
 };
 
@@ -35,15 +35,15 @@ const validateUser = async (
   next: NextFunction
 ) => {
   try {
-    const { email, password } = req.body;
+    const { email, password }: iUsuariologin = req.body;
 
     if (!email || !password) {
       throw new Error("email or password does not exist");
     }
-    const result = await usuarioModel.getUsuario({ email, password });
+    const resultado: any = await usuarioModel.getUnUsuario({ email, password });
     const comparePassword = await bcryptjs.compare(
       req.body.password,
-      result.password
+      resultado.password
     );
     if (comparePassword) {
       next();

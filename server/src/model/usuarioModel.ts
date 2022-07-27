@@ -10,8 +10,8 @@ class Usuario {
 
   async getUsuarios() {
     try {
-      const queryStr = 'SELECT * FROM usuario'
-      const resultado: any = await this.client.query(queryStr,[]);
+      const queryStr = "SELECT * FROM usuario";
+      const resultado: any = await this.client.query(queryStr, []);
       return resultado.rows;
     } catch (error) {
       console.log(error);
@@ -20,8 +20,8 @@ class Usuario {
 
   async getUnUsuario(usuario: iUsuariologin) {
     try {
-      const queryStr = 'SELECT * FROM usuario WHERE email = $1';
-      const values = [usuario.email];
+      const queryStr = "SELECT * FROM usuario WHERE email = $1";
+      const values = [usuario.email, usuario.password];
       const resultado = await this.client.query(queryStr, values);
       return resultado.rows;
     } catch (error) {
@@ -29,11 +29,16 @@ class Usuario {
     }
   }
 
-  async saveUsuario(usuario:iUsuario) {
+  async addUsuario(usuario: iUsuario) {
     try {
       const queryStr =
         'INSERT INTO "usuario"(email, password, nombre, apellidos) VALUES($1,$2, $3, $4) RETURNING *';
-      const values = [usuario.email, usuario.password, usuario.nombre, usuario.apellidos || null];
+      const values = [
+        usuario.email,
+        usuario.password,
+        usuario.nombre,
+        usuario.apellidos || null,
+      ];
       const resultado = await this.client.query(queryStr, values);
       return resultado.rows[0];
     } catch (error) {
@@ -41,12 +46,36 @@ class Usuario {
     }
   }
 
-  async loginUser(email: string, password:string) {
+  async loginUsuario(usuario: iUsuariologin) {
+    try {
+      const queryStr = "SELECT * FROM usuarios WHERE email = $1";
+      const resultado = await this.client.query(queryStr, [
+        usuario.email,
+        usuario.password,
+      ]);
+      console.log(resultado.rows);
+      return resultado.rows[0];
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  async editUsuario(usuario: iUsuario, id_usuario: any) {
     try {
       const queryStr =
-        'SELECT * FROM usuarios WHERE email = $1'
-      const resultado = await this.client.query(queryStr, [email, password]);
-      console.log(resultado.rows)
+        "UPDATE usuarios SET (email, password, nombre, apellidos, fecha_nacimiento, direccion, cp, telefono, reserva_id) =($1,$2,$3,$4,$5,$6,$7,$8,$9) WHERE id_usuario=$10 returning *";
+      const resultado = await this.client.query(queryStr, [
+        usuario.email,
+        usuario.password,
+        usuario.nombre,
+        usuario.apellidos,
+        usuario.fecha_nacimiento,
+        usuario.direccion,
+        usuario.cp,
+        usuario.telefono,
+        usuario.reserva_id,
+        id_usuario,
+      ]);
+      console.log(resultado.rows);
       return resultado.rows[0];
     } catch (error) {
       console.log(error);

@@ -9,9 +9,7 @@ const reservaController = {
 
   getUnaReserva: async (req: Request, res: Response) => {
     const param: any = req.params["id"];
-    console.log(param);
     const reservas: any = await reservaModel.getUnaReserva(param);
-    console.log("conectado");
     res.json(reservas);
   },
 };

@@ -1,4 +1,4 @@
-export default interface iExperiencia{
+export default interface iExperiencia {
   id_experiencia: number;
   nombre: string;
   img: string;

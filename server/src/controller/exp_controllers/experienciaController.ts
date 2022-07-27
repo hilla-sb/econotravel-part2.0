@@ -9,9 +9,7 @@ const experienciaController = {
 
   getUnaExperiencia: async (req: Request, res: Response) => {
     const param: any = req.params["id"];
-    console.log(param);
     const experiencias: any = await experienciaModel.getUnaExperiencia(param);
-    console.log("conectado");
     res.json(experiencias);
   },
 };
