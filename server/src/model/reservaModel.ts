@@ -22,17 +22,32 @@ class Reserva {
         return resultado.rows [0];
     }
     //añadir
-    async addReserva(id_reserva:iReserva){
-        const queryStr='INSERT INTO reserva(nombre, apellidos, direccion, fecha_inicio, fecha_fin, cantidad, precio_total, experiencia_id ) VALUES($1, $2, $3, $4, $5, $6, $7, $8)'
-        console.log('intentando conectar', id_reserva)
-        await this.client.connect()
-        console.log('conectado')
-        console.log('esperando la query')
-        const resultado:any = await this.client.query(queryStr,[id_reserva.nombre, id_reserva.apellidos,id_reserva.direccion ,id_reserva.fecha_inicio, id_reserva.fecha_fin, id_reserva.cantidad, id_reserva.precio_total, id_reserva.experiencia_id] as string[]);
-        console.log('query ok')
-       // await this.client.end()
-        //console.log('conexion cerrada')
-        return resultado.rows[0];
+    async addReserva(id_reserva: iReserva){
+        try {const queryStr =
+            'INSERT INTO reserva(nombre, apellidos, direccion, fecha_inicio, fecha_fin, cantidad, precio_total, experiencia_id ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) returning *';
+            console.log('intentando conectar', id_reserva)
+            await this.client.connect();
+            console.log('conectado')
+            console.log('esperando la query')
+            const resultado: any = await this.client.query(queryStr,[
+                 id_reserva.nombre,
+                 id_reserva.apellidos,
+                 id_reserva.direccion ,
+                 id_reserva.fecha_inicio, 
+                 id_reserva.fecha_fin, 
+                 id_reserva.cantidad,
+                id_reserva.precio_total,
+                 id_reserva.experiencia_id
+                ] );
+            console.log('query ok')
+            //await this.client.end();
+            console.log('conexion cerrada')
+            return resultado.rows[0];
+            
+        } catch (error) { console.log (error)
+            
+        }
+        
     }
     //editar
      async editReserva(id_reserva:any, body:iReserva){
@@ -55,14 +70,15 @@ class Reserva {
     } 
     //eliminar
     async deleteReserva (id_reserva:any){
-        const queryStr='DELETE FROM reserva WHERE id_reserva = $1 returning *'
+        const queryStr=
+        'DELETE FROM reserva WHERE id_reserva = $1 returning *'
         console.log('intentando conectar', id_reserva)
-        await this.client.connect()
+        await this.client.connect();
         console.log('conectado')
         console.log('esperando la query')
-        const resultado = await this.client.query(queryStr,[id_reserva]);
+        const resultado:any = await this.client.query(queryStr,[id_reserva]);
         console.log('query ok')
-        await this.client.end()
+        await this.client.end();
         console.log('conexion cerrada')
         return resultado.rows [0];
     }
