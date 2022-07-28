@@ -8,7 +8,7 @@ export interface iUsuario {
   email: string;
   password: string;
   nombre: string;
-  apellidos: string;
+  apellido: string;
   fecha_nacimiento?: string;
   direccion?: string;
   cp?: string;

@@ -32,12 +32,12 @@ class Usuario {
   async addUsuario(usuario: iUsuario) {
     try {
       const queryStr =
-        'INSERT INTO "usuario"(email, password, nombre, apellidos) VALUES($1,$2, $3, $4) RETURNING *';
+        'INSERT INTO "usuario"(email, password, nombre, apellido) VALUES($1,$2, $3, $4) RETURNING *';
       const values = [
         usuario.email,
         usuario.password,
         usuario.nombre,
-        usuario.apellidos || null,
+        usuario.apellido || null,
       ];
       const resultado = await this.client.query(queryStr, values);
       return resultado.rows[0];
@@ -62,12 +62,12 @@ class Usuario {
   async editUsuario(usuario: iUsuario, id_usuario: any) {
     try {
       const queryStr =
-        "UPDATE usuarios SET (email, password, nombre, apellidos, fecha_nacimiento, direccion, cp, telefono, reserva_id) =($1,$2,$3,$4,$5,$6,$7,$8,$9) WHERE id_usuario=$10 returning *";
+        "UPDATE usuarios SET (email, password, nombre, apellido, fecha_nacimiento, direccion, cp, telefono, reserva_id) =($1,$2,$3,$4,$5,$6,$7,$8,$9) WHERE id_usuario=$10 returning *";
       const resultado = await this.client.query(queryStr, [
         usuario.email,
         usuario.password,
         usuario.nombre,
-        usuario.apellidos,
+        usuario.apellido,
         usuario.fecha_nacimiento,
         usuario.direccion,
         usuario.cp,

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { iUsuario } from "../model/interfaces/iUsuario";
-import usuarioModel from "../model/usuarioModel";
+import { iUsuario } from "../../model/interfaces/iUsuario";
+import usuarioModel from "../../model/usuarioModel";
 
 const usuarioController = async (req: Request, res: Response) => {
   try {
@@ -8,7 +8,7 @@ const usuarioController = async (req: Request, res: Response) => {
       email,
       password,
       nombre,
-      apellidos,
+      apellido,
       fecha_nacimiento,
       direccion,
       cp,
@@ -25,7 +25,7 @@ const usuarioController = async (req: Request, res: Response) => {
       email,
       password,
       nombre,
-      apellidos,
+      apellido,
       fecha_nacimiento,
       direccion,
       cp,
