@@ -21,9 +21,9 @@ class Usuario {
   async getUnUsuario(usuario: iUsuariologin) {
     try {
       const queryStr = "SELECT * FROM usuario WHERE email = $1";
-      const values = [usuario.email, usuario.password];
+      const values = [usuario.email];
       const resultado = await this.client.query(queryStr, values);
-      return resultado.rows;
+      return resultado.rows[0];
     } catch (error) {
       console.log(error);
     }
